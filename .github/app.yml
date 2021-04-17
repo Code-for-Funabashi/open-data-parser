@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-name: docker-compose
+name: poetry-test
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -27,7 +27,7 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
       
       - name: Add path for Poetry
-        run: echo "::add-path::$HOME/.poetry/bin"
+        run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
       # インストールした Poetry を使って必要な Python パッケージをインストールする
       - name: Install Dependencies
         run: poetry install --no-interaction
