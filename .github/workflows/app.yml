@@ -27,7 +27,7 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
       
       - name: Add path for Poetry
-        run: echo "::add-path::$HOME/.poetry/bin"
+        run: source  $HOME/.poetry/env
       # インストールした Poetry を使って必要な Python パッケージをインストールする
       - name: Install Dependencies
         run: poetry install --no-interaction
