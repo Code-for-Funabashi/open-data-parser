@@ -1,7 +1,9 @@
 """Download Data"""
 import csv
-from dataclasses import dataclass
+from urllib import request
+
 from typing import Dict
+from typing import List
 from typing import Iterable
 
 
@@ -16,7 +18,7 @@ class Downloader:
 
     def _download(self):
         response = request.urlopen(self.url)
-        return response.data.read().decode('sjis').split('\r\n')
+        return response.read().decode("sjis").split("\r\n")
 
     def fetch(self) -> Iterable[Dict]:
         return csv.DictReader(self._download(), self.schema)
