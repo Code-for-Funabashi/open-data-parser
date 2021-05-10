@@ -4,6 +4,7 @@ from utils import get_geocode, combine_dicts
 from transformer import transform
 import os
 import json
+from pathlib import Path
 
 TARGET = [
     {
@@ -23,12 +24,15 @@ TARGET = [
             "lat",
             "lon",
         ],
+        # TODO:
+        # この仕様もちょっと悩ましい...
+        "output_path":"projects/kosodate-map/小規模保育"
     }
 ]
 
 
 def main():
-
+    dir_path = Path(__file__).parent
     for row in TARGET:
         data = Downloader(row["url"], row["input_schema"])
         
@@ -41,11 +45,11 @@ def main():
         # output schemaにデータ構造を揃える
         transformed_records = transform(records=output_records, output_schema=row["output_schema"])
 
-        # csv filenameをjson filenameに利用する
-        # FIXME:
-        # filenameに"."を含む場合対応していない。
-        filename = os.path.basename(row["url"]).split(".")[0]
-        with open(f"{filename}.json", "w+") as fp:
+        # 出力
+        filename = os.path.basename(row["output_path"])
+        data_dir = os.path.dirname(row["output_path"])
+        
+        with open(dir_path / data_dir / f"{filename}.json", "w+") as fp:
             json.dump(transformed_records, fp)
 
 
