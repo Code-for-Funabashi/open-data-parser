@@ -1,15 +1,11 @@
+import os
 import json
 from bs4 import BeautifulSoup
 import pandas as pd
 from typing import List
 from typing import Dict
-from typing import T
-from typing import Union
-from urllib import request
-import ssl
-import os
 import googlemaps
-
+from downloader import Downloader
 
 assert os.environ.get("GOOGLE_API_KEY"), "Set your GOOGLE_API_KEY."
 googleapikey = os.environ["GOOGLE_API_KEY"]
@@ -18,7 +14,7 @@ gmaps = googlemaps.Client(key=googleapikey)
 
 combine_dicts = lambda x, y: {**x, **y}
 
-def csv2json(df:pd.DataFrame, cols_to_move:List) -> List[T]:
+def csv2json(df:pd.DataFrame, cols_to_move:List) -> List[Dict]:
     # "name", "lat", "lng", "details"の4keyのjson形式データを生成する関数
     # detailsに入れ子格納したいカラム、存在するものだけ持ってくる。
     
@@ -28,19 +24,29 @@ def csv2json(df:pd.DataFrame, cols_to_move:List) -> List[T]:
 
 
 
-def get_geocode(address:Union[List, str]) -> Dict:
+def get_geocode(data:Downloader) -> Dict:
     """
      args: 
-       address: google APIで叩くための住所情報
+       data: Downloader object
      return: 
        1 point location(latitude and longitude)
     """
-    if isinstance(address, list):
-        outputs = []
-        for addr_ in address:
-            out: Dict = gmaps.geocode(addr_)
+    outputs = []
+    facility_list = list(data.fetch())[1:]# headerを取り除く
+    for facility in facility_list:
+        try:
+            out: Dict = gmaps.geocode(facility["address"])[0]
             outputs.append(out['geometry']["location"])
-        return outputs
-    else:
-        output_dict: Dict = gmaps.geocode(address)
-        return output_dict['geometry']["location"]
+        except googlemaps.exceptions.HTTPError as HTTPError:
+            print(f"HTTPError Occurred for {str(facility)}")
+        except IndexError:
+            print(f"検索結果が存在しませんでした。:{str(facility)}")
+            # TODO:
+            #  '山手1-3-17' / '本中山2-23-16'に大して、geocodeの返り値が[]になっていた。
+            # 一方、”船橋市”を先頭に付けることで返り値がNULLで無くなった。
+            # HACK:
+            # とりあえず、再帰的にもう一度geocode処理実行
+            out: Dict = gmaps.geocode("船橋市"+facility["address"])[0]
+            outputs.append(out['geometry']["location"])
+
+    return outputs
