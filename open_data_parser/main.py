@@ -1,5 +1,4 @@
 """main"""
-import os
 import json
 from pathlib import Path
 from typing import Iterable
@@ -23,7 +22,10 @@ TARGETS = [
         ],
         "transformer": [query_coordinate_from_address],
         "formatter": format_to_point,
-        "output_path": "projects/kosodate-map/syokibohoikuichiran",
+        "output": {
+            "path": "data/kosodate-map/",
+            "filename": "syokibohoikuichiran.json",
+        },
     }
 ]
 
@@ -36,6 +38,11 @@ def transform(transformers: List[Callable], data: Iterable[Dict]) -> Iterable[Di
     return data
 
 
+def write(filepath: str, data):
+    with open(filepath, "w+") as fp:
+        json.dump(data, fp)
+
+
 def main():
     dir_path = Path(__file__).parent
     for target in TARGETS:
@@ -43,12 +50,7 @@ def main():
 
         transformed = transform(target["transformer"], raw_data)
 
-        # 出力
-        filename = os.path.basename(target["output_path"])
-        data_dir = os.path.dirname(target["output_path"])
-
-        with open(dir_path / data_dir / f"{filename}.json", "w+") as fp:
-            json.dump(transformed, fp)
+        write(f'target["output"]["path"]/target["output"]["filename"]', transformed)
 
 
 if __name__ == "__main__":
