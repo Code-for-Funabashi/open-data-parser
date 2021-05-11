@@ -30,7 +30,9 @@ TARGETS = [
 ]
 
 
-def transform(transformers: List[Callable], data: Iterable[Dict]) -> Iterable[Dict]:
+def transform(
+    transformers: List[Callable[[Iterable[Dict]], Iterable[Dict]]], data: Iterable[Dict]
+) -> Iterable[Dict]:
 
     for transformer in transformers:
         data = transformer(data)
