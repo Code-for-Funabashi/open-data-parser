@@ -1,12 +1,17 @@
 """main"""
-from downloader import Downloader
-from utils import get_geocode, combine_dicts
-from transformer import transform
 import os
 import json
 from pathlib import Path
+from typing import Iterable
+from typing import Dict
+from typing import List
+from typing import Callable
 
-TARGET = [
+from open_data_parser.downloader import Downloader
+from open_data_parser.transformer import query_coordinate_from_address
+from open_data_parser.formatter.points import format_to_point
+
+TARGETS = [
     {
         "url": "https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
         "input_schema": [
@@ -16,41 +21,34 @@ TARGET = [
             "capacity",
             "established_at",
         ],
-        # TODO:
-        # TO act-taさん > output_schemaの記法どうしましょう？5/8に相談した時のschemaを失念している気がします。mm
-        # 取り急ぎ、下記3つ以外の情報を全てdetailedに格納する方針で動いています。
-        "output_schema": [
-            "name",
-            "lat",
-            "lon",
-        ],
-        # TODO:
-        # この仕様もちょっと悩ましい...
-        "output_path":"projects/kosodate-map/小規模保育"
+        "transformer": [query_coordinate_from_address],
+        "formatter": format_to_point,
+        "output_path": "projects/kosodate-map/syokibohoikuichiran",
     }
 ]
 
 
+def transform(transformers: List[Callable], data: Iterable[Dict]) -> Iterable[Dict]:
+
+    for transformer in transformers:
+        data = transformer(data)
+
+    return data
+
+
 def main():
     dir_path = Path(__file__).parent
-    for row in TARGET:
-        data = Downloader(row["url"], row["input_schema"])
-        
-        # ジオコーディング
-        geocodes = get_geocode(data)
+    for target in TARGETS:
+        raw_data = Downloader(target["url"], target["input_schema"]).fetch()
 
-        # geocode と、施設情報のdictionaryを結合する
-        output_records = list(map(combine_dicts, list(data.fetch()),geocodes))
-
-        # output schemaにデータ構造を揃える
-        transformed_records = transform(records=output_records, output_schema=row["output_schema"])
+        transformed = transform(target["transformer"], raw_data)
 
         # 出力
-        filename = os.path.basename(row["output_path"])
-        data_dir = os.path.dirname(row["output_path"])
-        
+        filename = os.path.basename(target["output_path"])
+        data_dir = os.path.dirname(target["output_path"])
+
         with open(dir_path / data_dir / f"{filename}.json", "w+") as fp:
-            json.dump(transformed_records, fp)
+            json.dump(transformed, fp)
 
 
 if __name__ == "__main__":
