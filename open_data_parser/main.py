@@ -1,5 +1,7 @@
 """main"""
 import json
+import os
+import shutil
 from pathlib import Path
 from typing import Iterable
 from typing import Dict
@@ -41,18 +43,21 @@ def transform(
 
 
 def write(filepath: str, data):
-    with open(filepath, "w+") as fp:
+    with open(filepath, "w") as fp:
         json.dump(data, fp)
 
 
 def main():
     dir_path = Path(__file__).parent
     for target in TARGETS:
+        # TODO: 関数化する
+        shutil.rmtree(target["output"]["path"])
+        os.makedirs(target["output"]["path"])
         raw_data = Downloader(target["url"], target["input_schema"]).fetch()
 
         transformed = transform(target["transformer"], raw_data)
 
-        write(f'target["output"]["path"]/target["output"]["filename"]', transformed)
+        write(f'{target["output"]["path"]}/{target["output"]["filename"]}', list(transformed))
 
 
 if __name__ == "__main__":
