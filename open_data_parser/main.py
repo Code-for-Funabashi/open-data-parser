@@ -9,6 +9,7 @@ from typing import List
 from typing import Callable
 
 from open_data_parser.downloader import Downloader
+from open_data_parser.transformer import add_city_name
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.formatter.points import format_to_point
 
@@ -22,7 +23,7 @@ TARGETS = [
             "capacity",
             "established_at",
         ],
-        "transformer": [query_coordinate_from_address],
+        "transformer": [add_city_name, query_coordinate_from_address],
         "formatter": format_to_point,
         "output": {
             "path": "data/kosodate-map/",
@@ -57,7 +58,10 @@ def main():
 
         transformed = transform(target["transformer"], raw_data)
 
-        write(f'{target["output"]["path"]}/{target["output"]["filename"]}', list(transformed))
+        write(
+            f'{target["output"]["path"]}/{target["output"]["filename"]}',
+            list(transformed),
+        )
 
 
 if __name__ == "__main__":
