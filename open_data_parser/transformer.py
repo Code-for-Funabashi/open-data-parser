@@ -1,6 +1,7 @@
 """transformer"""
 
 from typing import Dict
+from typing import List
 from typing import Iterable
 import os
 
@@ -22,9 +23,6 @@ def query_coordinate_from_address(data: Iterable[Dict]) -> Iterable[Dict]:
     gmaps = googlemaps.Client(key=googleapikey)
 
     for record in data:
-        # TODO:
-        #  '山手1-3-17' / '本中山2-23-16'に大して、geocodeの返り値が[]になっていた。
-        # 一方、”船橋市”を先頭に付けることで返り値がNULLで無くなった。
         try:
             lat, lng = gmaps.geocode(record['address'])[0]["geometry"]["location"]
         except Exception as err:

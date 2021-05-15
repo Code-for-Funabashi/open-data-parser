@@ -3,6 +3,7 @@ import json
 import os
 import shutil
 from pathlib import Path
+from functools import partial
 from typing import Iterable
 from typing import Dict
 from typing import List
@@ -23,7 +24,10 @@ TARGETS = [
             "capacity",
             "established_at",
         ],
-        "transformer": [add_city_name, query_coordinate_from_address],
+        "transformer": [
+            add_city_name,
+            query_coordinate_from_address,
+        ],
         "formatter": format_to_point,
         "output": {
             "path": "data/kosodate-map/",
@@ -45,7 +49,7 @@ def transform(
 
 def write(filepath: str, data):
     with open(filepath, "w") as fp:
-        json.dump(data, fp)
+        json.dump(data, fp, ensure_ascii=False)
 
 
 def main():
