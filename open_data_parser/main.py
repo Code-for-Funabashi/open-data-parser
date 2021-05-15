@@ -2,14 +2,12 @@
 import json
 import os
 import shutil
-from pathlib import Path
-from functools import partial
 from typing import Iterable
 from typing import Dict
 from typing import List
 from typing import Callable
 
-from open_data_parser.downloader import Downloader
+from open_data_parser.downloader import fetch_csv
 from open_data_parser.transformer import add_city_name
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.formatter.points import format_to_point
@@ -53,12 +51,10 @@ def write(filepath: str, data):
 
 
 def main():
-    dir_path = Path(__file__).parent
     for target in TARGETS:
-        # TODO: 関数化する
         shutil.rmtree(target["output"]["path"])
         os.makedirs(target["output"]["path"])
-        raw_data = Downloader(target["url"], target["input_schema"]).fetch()
+        raw_data = fetch_csv(target["url"], target["input_schema"])
 
         transformed = transform(target["transformer"], raw_data)
 
