@@ -1,7 +1,23 @@
-# Scrape-OpenData
+# open data parser
+船橋市のオープンデータを取得するコードを管理するレポジトリです。
 
+## Install
+```bash
+poetry install
+```
 
-- 船橋市のオープンデータを取得するコードを管理するレポジトリです。
+## Usage
+```bash
+# GOOGLE_API_KEYを環境変数に設定する
+export GOOGLE_API_KEY="Your GOOGLE API KEY"
+# open_data_parser/main.pyファイル内のTARGET変数を設定し、下記のコマンドを実行する
+poetry run python open_data_parser/main.py
+```
+
+## Requirement
+- Python 3.8 ~
+- poetry 1.0 ~
+
 
 1. geocodeディレクトリ:
     - 子育てマップ（https://github.com/Code-for-Funabashi/kosodate-map/）開発に利用する施設データのスクレープ、整形コード
