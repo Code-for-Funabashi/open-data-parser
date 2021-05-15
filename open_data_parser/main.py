@@ -49,7 +49,7 @@ def transform(
 
 def write(filepath: str, data):
     with open(filepath, "w") as fp:
-        json.dump(data, fp, ensure_ascii=False)
+        json.dump(data, fp, ensure_ascii=False, indent=2)
 
 
 def main():
