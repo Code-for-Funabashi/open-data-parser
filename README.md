@@ -26,3 +26,7 @@ poetry run python open_data_parser/main.py
 ```bash
 poetry run python -m unittest discover tests/open_data_parser/
 ```
+
+## Data
+open_data_parserで加工したデータは `/data` 配下に出力される。  
+これは [kosodate-map](https://github.com/Code-for-Funabashi/kosodate-map) で利用するため、githubの管理対象としている。
