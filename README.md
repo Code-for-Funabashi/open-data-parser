@@ -19,3 +19,8 @@ export GOOGLE_API_KEY="Your GOOGLE API KEY"
 # open_data_parser/main.pyファイル内のTARGET変数を設定し、下記のコマンドを実行する
 poetry run python open_data_parser/main.py
 ```
+
+## Testing
+```bash
+poetry run python -m unittest discover tests/open_data_parser/
+```
