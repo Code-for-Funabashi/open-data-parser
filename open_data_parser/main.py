@@ -8,6 +8,7 @@ from typing import Callable
 from typing import TypedDict
 
 from open_data_parser.downloader import fetch_csv
+from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import query_coordinate_from_address
@@ -25,6 +26,7 @@ class Target(TypedDict):
         formatter: データを出力形式に整形するCallable
         writer: データを出力するCallable
     """
+
     reader: Callable[..., Iterator[Dict[str, str]]]
     transformers: List[Callable[..., Iterator[Dict[str, str]]]]
     formatter: Callable[..., Iterator[Dict[str, str]]]
@@ -57,18 +59,8 @@ TARGETS = [
 ]
 
 
-def transform(
-    transformers: List[Callable[[Iterator[Dict]], Iterator[Dict]]], data: Iterator[Dict]
-) -> Iterator[Dict]:
-    """Call transformers in order."""
-
-    for transformer in transformers:
-        data = transformer(data)
-
-    return data
-
-
 def main():
+    """main"""
     for target in TARGETS:
         raw_data = target["reader"]()
 
