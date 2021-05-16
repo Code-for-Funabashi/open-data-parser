@@ -49,7 +49,7 @@ TARGETS = [
         transformers=[
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
-            query_coordinate_from_address,
+            partial(query_coordinate_from_address, key="address"),
         ],
         formatter=format_to_point,
         writer=partial(

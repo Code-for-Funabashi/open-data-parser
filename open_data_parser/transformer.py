@@ -37,7 +37,7 @@ def concat_str(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
         yield record
 
 
-def query_coordinate_from_address(data: Iterator[Dict]) -> Iterator[Dict]:
+def query_coordinate_from_address(data: Iterator[Dict], key:str) -> Iterator[Dict]:
     """Query the coordinate from the address."""
 
     assert os.environ.get("GOOGLE_API_KEY"), "Set your GOOGLE_API_KEY."
@@ -46,10 +46,10 @@ def query_coordinate_from_address(data: Iterator[Dict]) -> Iterator[Dict]:
 
     for record in data:
         try:
-            location = gmaps.geocode(record["address"])[0]["geometry"]["location"]
+            location = gmaps.geocode(record[key])[0]["geometry"]["location"]
         except Exception as err:
             logger.error(
-                "geocode error occured: err=%s, address=%s", err, record["address"]
+                "geocode error occured: err=%s, address=%s", err, record[key]
             )
             raise err
         record.update({"lat": location["lat"], "lng": location["lng"]})
