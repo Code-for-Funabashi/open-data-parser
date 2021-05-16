@@ -13,7 +13,7 @@ from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
-from open_data_parser.formatter.points import format_to_point
+from open_data_parser.formatter import format_to_point
 
 
 class Target(TypedDict):
@@ -66,7 +66,9 @@ def main():
 
         transformed = transform(target["transformers"], raw_data)
 
-        target["writer"](data=list(transformed))
+        formatted = target["formatter"](transformed)
+
+        target["writer"](data=list(formatted))
 
 
 if __name__ == "__main__":
