@@ -38,7 +38,10 @@ def concat_str(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
 
 
 def query_coordinate_from_address(data: Iterator[Dict], key:str) -> Iterator[Dict]:
-    """Query the coordinate from the address."""
+    """Query the coordinate from the address.
+       GOOGLE_API_KEY is required because it uses googlemap's geocoding API
+       see: https://developers.google.com/maps/documentation/geocoding/overview
+    """
 
     assert os.environ.get("GOOGLE_API_KEY"), "Set your GOOGLE_API_KEY."
     googleapikey = os.environ["GOOGLE_API_KEY"]

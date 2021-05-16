@@ -10,7 +10,9 @@ poetry install
 - Python 3.8 or later
 - poetry 1.0 or later
 - GOOGLE_API_KEY
-    - GCPのgeocoding APIの利用が許可されたAPIキー
+    - GCPの[geocoding API][geocoding]の利用が許可されたAPIキー
+
+[geocoding]: https://developers.google.com/maps/documentation/geocoding/overview
 
 ## Usage
 ```bash
