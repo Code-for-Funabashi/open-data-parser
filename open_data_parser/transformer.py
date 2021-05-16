@@ -29,11 +29,11 @@ def skip_header(data: Iterator[Dict]) -> Iterator[Dict]:
     return data
 
 
-def concat_str(data: Iterator[Dict]) -> Iterator[Dict]:
+def concat_str(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
     """Concat a string to the string with the given key."""
 
     for record in data:
-        record["address"] = f"船橋市{record['address']}"
+        record[key] = value + record[key]
         yield record
 
 
