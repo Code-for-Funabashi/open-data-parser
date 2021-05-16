@@ -24,8 +24,9 @@ def query_coordinate_from_address(data: Iterable[Dict]) -> Iterable[Dict]:
 
     for record in data:
         try:
-            lat, lng = gmaps.geocode(record['address'])[0]["geometry"]["location"]
+            location = gmaps.geocode(record["address"])[0]["geometry"]["location"]
         except Exception as err:
+            # FIXME: loggerを使う
             print(err, record["address"])
-        record.update({"lat": lat, "lng": lng})
+        record.update({"lat": location["lat"], "lng": location["lng"]})
         yield record
