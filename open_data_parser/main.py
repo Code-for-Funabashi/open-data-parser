@@ -1,6 +1,6 @@
 """main"""
 from functools import partial
-from typing import Iterable
+from typing import Iterator
 from typing import Dict
 from typing import List
 from typing import Callable
@@ -8,16 +8,26 @@ from typing import Callable
 from typing import TypedDict
 
 from open_data_parser.downloader import fetch_csv
-from open_data_parser.transformer import add_city_name
+from open_data_parser.transformer import skip_header
+from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter.points import format_to_point
 
 
 class Target(TypedDict):
-    reader: Callable[..., Iterable[Dict[str, str]]]
-    transformers: List[Callable[..., Iterable[Dict[str, str]]]]
-    formatter: Callable[..., Iterable[Dict[str, str]]]
+    """パーサーのターゲット。
+       データの読み込み、加工、整形、出力を行う関数を登録する。
+
+    Attributes:
+        reader: パースするデータを読み込むするCallable
+        transformers: readerで取得したデータを加工するCallableを指定した配列
+        formatter: データを出力形式に整形するCallable
+        writer: データを出力するCallable
+    """
+    reader: Callable[..., Iterator[Dict[str, str]]]
+    transformers: List[Callable[..., Iterator[Dict[str, str]]]]
+    formatter: Callable[..., Iterator[Dict[str, str]]]
     writer: Callable
 
 
@@ -35,8 +45,8 @@ TARGETS = [
             ],
         ),
         transformers=[
-            # XXX: skip_header
-            add_city_name,
+            skip_header,
+            concat_str,
             query_coordinate_from_address,
         ],
         formatter=format_to_point,
@@ -48,8 +58,9 @@ TARGETS = [
 
 
 def transform(
-    transformers: List[Callable[[Iterable[Dict]], Iterable[Dict]]], data: Iterable[Dict]
-) -> Iterable[Dict]:
+    transformers: List[Callable[[Iterator[Dict]], Iterator[Dict]]], data: Iterator[Dict]
+) -> Iterator[Dict]:
+    """Call transformers in order."""
 
     for transformer in transformers:
         data = transformer(data)

@@ -1,10 +1,10 @@
 """ formatter for points """
 
 from typing import Dict
-from typing import Iterable
+from typing import Iterator
 
 
-def format_to_point(records: Iterable[Dict]) -> Iterable[Dict]:
+def format_to_point(records: Iterator[Dict]) -> Iterator[Dict]:
 
     for row in records:
 
