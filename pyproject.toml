@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "scrape-opendata"
+name = "open_data_parser"
 version = "0.1.0"
 description = ""
 authors = ["code-for-funabashi"]

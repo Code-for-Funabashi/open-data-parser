@@ -1,10 +1,18 @@
 # open data parser
-船橋市のオープンデータを取得するコードを管理するレポジトリです。
+船橋市のオープンデータを取得し、加工する。
 
 ## Install
 ```bash
 poetry install
 ```
+
+## Requirement
+- Python 3.8 or later
+- poetry 1.0 or later
+- GOOGLE_API_KEY
+    - GCPの[geocoding API][geocoding]の利用が許可されたAPIキー
+
+[geocoding]: https://developers.google.com/maps/documentation/geocoding/overview
 
 ## Usage
 ```bash
@@ -14,21 +22,11 @@ export GOOGLE_API_KEY="Your GOOGLE API KEY"
 poetry run python open_data_parser/main.py
 ```
 
-## Requirement
-- Python 3.8 ~
-- poetry 1.0 ~
+## Testing
+```bash
+poetry run python -m unittest discover tests/open_data_parser/
+```
 
-
-1. geocodeディレクトリ:
-    - 子育てマップ（https://github.com/Code-for-Funabashi/kosodate-map/）開発に利用する施設データのスクレープ、整形コード
-    - https://www.city.funabashi.lg.jp/funakkonavi/map/11/index.html からデータを取得しております。
-
-    - projects
-        - PJTで利用するデータを格納するディレクトリ
-        - /kosodate-map(このPJT用のデータだけgitに上げています)
-    
-    - utils.py
-        - データ整形に利用出来そうな汎用的な関数をまとめておく
-    - csv2json.py
-        - 暫定的に用意したcsvファイル（projects/kosodate-map/配下にある）をtsで扱いやすい・拡張可能な形でjson形式に変換する
-        - `python Scrape-OpenData/geodata/csv2json.py`で実行
+## Data
+open_data_parserで加工したデータは `/data` 配下に出力される。  
+これは [kosodate-map](https://github.com/Code-for-Funabashi/kosodate-map) で利用するため、githubの管理対象としている。

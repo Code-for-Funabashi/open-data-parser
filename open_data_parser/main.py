@@ -1,56 +1,74 @@
 """main"""
-from downloader import Downloader
-from utils import get_geocode, combine_dicts
-from transformer import transform
-import os
-import json
-from pathlib import Path
+from functools import partial
+from typing import Iterator
+from typing import Dict
+from typing import List
+from typing import Callable
 
-TARGET = [
-    {
-        "url": "https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
-        "input_schema": [
-            "name",
-            "address",
-            "phone_number",
-            "capacity",
-            "established_at",
+from typing import TypedDict
+
+from open_data_parser.downloader import fetch_csv
+from open_data_parser.transformer import transform
+from open_data_parser.transformer import skip_header
+from open_data_parser.transformer import concat_str
+from open_data_parser.transformer import query_coordinate_from_address
+from open_data_parser.writer import write_json
+from open_data_parser.formatter import format_to_point
+
+
+class Target(TypedDict):
+    """パーサーのターゲット。
+       データの読み込み、加工、整形、出力を行う関数を登録する。
+
+    Attributes:
+        reader: パースするデータを読み込むするCallable
+        transformers: readerで取得したデータを加工するCallableを指定した配列
+        formatter: データを出力形式に整形するCallable
+        writer: データを出力するCallable
+    """
+
+    reader: Callable[..., Iterator[Dict[str, str]]]
+    transformers: List[Callable[..., Iterator[Dict[str, str]]]]
+    formatter: Callable[..., Iterator[Dict[str, str]]]
+    writer: Callable
+
+
+TARGETS = [
+    Target(
+        reader=partial(
+            fetch_csv,
+            url="https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, key="address"),
         ],
-        # TODO:
-        # TO act-taさん > output_schemaの記法どうしましょう？5/8に相談した時のschemaを失念している気がします。mm
-        # 取り急ぎ、下記3つ以外の情報を全てdetailedに格納する方針で動いています。
-        "output_schema": [
-            "name",
-            "lat",
-            "lon",
-        ],
-        # TODO:
-        # この仕様もちょっと悩ましい...
-        "output_path":"projects/kosodate-map/小規模保育"
-    }
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="syokibohoikuichiran.json"
+        ),
+    )
 ]
 
 
 def main():
-    dir_path = Path(__file__).parent
-    for row in TARGET:
-        data = Downloader(row["url"], row["input_schema"])
-        
-        # ジオコーディング
-        geocodes = get_geocode(data)
+    """main"""
+    for target in TARGETS:
+        raw_data = target["reader"]()
 
-        # geocode と、施設情報のdictionaryを結合する
-        output_records = list(map(combine_dicts, list(data.fetch()),geocodes))
+        transformed = transform(target["transformers"], raw_data)
 
-        # output schemaにデータ構造を揃える
-        transformed_records = transform(records=output_records, output_schema=row["output_schema"])
+        formatted = target["formatter"](transformed)
 
-        # 出力
-        filename = os.path.basename(row["output_path"])
-        data_dir = os.path.dirname(row["output_path"])
-        
-        with open(dir_path / data_dir / f"{filename}.json", "w+") as fp:
-            json.dump(transformed_records, fp)
+        target["writer"](data=list(formatted))
 
 
 if __name__ == "__main__":
