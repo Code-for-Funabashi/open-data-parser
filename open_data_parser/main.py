@@ -1,4 +1,6 @@
 """main"""
+import os
+import shutil
 from functools import partial
 from typing import Iterator
 from typing import Dict
@@ -14,6 +16,9 @@ from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
+
+
+OUTPUT_BASE_PATH = "./data"
 
 
 class Target(TypedDict):
@@ -53,7 +58,7 @@ TARGETS = [
         ],
         formatter=format_to_point,
         writer=partial(
-            write_json, path="data/kosodate-map/", filename="syokibohoikuichiran.json"
+            write_json, path=f"{OUTPUT_BASE_PATH}/kosodate-map/", filename="syokibohoikuichiran.json"
         ),
     )
 ]
@@ -61,6 +66,8 @@ TARGETS = [
 
 def main():
     """main"""
+
+    shutil.rmtree(OUTPUT_BASE_PATH)
     for target in TARGETS:
         raw_data = target["reader"]()
 
