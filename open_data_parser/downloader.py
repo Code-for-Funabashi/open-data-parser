@@ -18,4 +18,4 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     """
     localに配置させたcsv fileからデータを読み込み、定義されたスキーマのデータを返却する
     """
-    return csv.DictReader(open(path, "r").readlines(), schema)
+    return csv.DictReader(open(path, "r"), schema)
