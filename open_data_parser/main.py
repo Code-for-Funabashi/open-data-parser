@@ -9,7 +9,7 @@ from typing import Callable
 
 from typing import TypedDict
 
-from open_data_parser.downloader import fetch_csv
+from open_data_parser.downloader import fetch_csv, read_csv
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
@@ -131,6 +131,35 @@ TARGETS = [
             write_json, path="data/kosodate-map/", filename="ninteikodomoenitiran.json"
         ),
     ),
+    # 公民館
+    Target(
+        reader=partial(
+            read_csv,
+            path='./input/kosodate-map/kouminkan.csv',
+            schema=[
+                "id",
+                "area",
+                "name",
+                "name_hurigana",
+                "phone_number",
+                "FAX_number",
+                "zip_code",
+                "address"
+            ]
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+
+            partial(concat_str, key="name", value="公民館", from_left=False),
+            partial(query_coordinate_from_address, key="address"),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="kouminkan.json"
+        ),
+    )
+
 ]
 
 

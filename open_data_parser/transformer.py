@@ -29,11 +29,11 @@ def skip_header(data: Iterator[Dict]) -> Iterator[Dict]:
     return data
 
 
-def concat_str(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
+def concat_str(data: Iterator[Dict], key: str, value: str, from_left:bool=True) -> Iterator[Dict]:
     """Concat a string to the string with the given key."""
 
     for record in data:
-        record[key] = value + record[key]
+        record[key] = value + record[key] if from_left else record[key] + value
         yield record
 
 
