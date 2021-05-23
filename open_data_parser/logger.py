@@ -4,7 +4,7 @@ import sys
 import logging
 
 
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
 stream = logging.StreamHandler(stream=sys.stderr)
 stream.setFormatter(formatter)
