@@ -29,7 +29,9 @@ def skip_header(data: Iterator[Dict]) -> Iterator[Dict]:
     return data
 
 
-def concat_str(data: Iterator[Dict], key: str, value: str, from_left:bool=True) -> Iterator[Dict]:
+def concat_str(
+    data: Iterator[Dict], key: str, value: str, from_left: bool = True
+) -> Iterator[Dict]:
     """Concat a string to the string with the given key."""
 
     for record in data:
@@ -37,7 +39,7 @@ def concat_str(data: Iterator[Dict], key: str, value: str, from_left:bool=True) 
         yield record
 
 
-def query_coordinate_from_address(data: Iterator[Dict], key:str) -> Iterator[Dict]:
+def query_coordinate_from_address(data: Iterator[Dict], key: str) -> Iterator[Dict]:
     """Query the coordinate from the address.
        GOOGLE_API_KEY is required because it uses googlemap's geocoding API
        see: https://developers.google.com/maps/documentation/geocoding/overview
@@ -51,9 +53,7 @@ def query_coordinate_from_address(data: Iterator[Dict], key:str) -> Iterator[Dic
         try:
             location = gmaps.geocode(record[key])[0]["geometry"]["location"]
         except Exception as err:
-            logger.error(
-                "geocode error occured: err=%s, address=%s", err, record[key]
-            )
+            logger.error("geocode error occured: err=%s, address=%s", err, record[key])
             raise err
         record.update({"lat": location["lat"], "lng": location["lng"]})
         yield record

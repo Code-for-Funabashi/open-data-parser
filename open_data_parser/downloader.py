@@ -14,6 +14,7 @@ def fetch_csv(url: str, schema: List[str]) -> Iterator[Dict]:
     with request.urlopen(url) as response:
         return csv.DictReader(response.read().decode("sjis").split("\r\n"), schema)
 
+
 def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     """
     localに配置させたcsv fileからデータを読み込み、定義されたスキーマのデータを返却する
