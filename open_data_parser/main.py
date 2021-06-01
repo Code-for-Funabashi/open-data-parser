@@ -49,7 +49,7 @@ TARGETS = [
         transformers=[
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
-            partial(query_coordinate_from_address, key="address"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
         ],
         formatter=format_to_point,
         writer=partial(
@@ -68,7 +68,7 @@ TARGETS = [
         transformers=[
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
-            partial(query_coordinate_from_address, key="address"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
         ],
         formatter=format_to_point,
         writer=partial(
@@ -85,7 +85,7 @@ TARGETS = [
         transformers=[
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
-            partial(query_coordinate_from_address, key="address"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
         ],
         formatter=format_to_point,
         writer=partial(
@@ -102,7 +102,7 @@ TARGETS = [
         transformers=[
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
-            partial(query_coordinate_from_address, key="address"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
         ],
         formatter=format_to_point,
         writer=partial(
@@ -129,7 +129,7 @@ TARGETS = [
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
             partial(concat_str, key="name", value="公民館", from_left=False),
-            partial(query_coordinate_from_address, key="address"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
         ],
         formatter=format_to_point,
         writer=partial(
