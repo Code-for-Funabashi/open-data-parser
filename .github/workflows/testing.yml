@@ -24,4 +24,7 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Testing
-        run: poetry run python -m unittest discover tests/open_data_parser/
+        run: |
+          # set dummy API KEY
+          export GOOGLE_API_KEY=dummy_api_key
+          poetry run python -m unittest discover tests/open_data_parser/
