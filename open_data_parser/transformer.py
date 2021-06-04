@@ -47,15 +47,10 @@ def query_coordinate_from_address(data: Iterator[Dict], keys: List[str]) -> Iter
 
     assert os.environ.get("GOOGLE_API_KEY"), "Set your GOOGLE_API_KEY."
     googleapikey = os.environ["GOOGLE_API_KEY"]
-    gmaps = googlemaps.Client()
-    # gmaps = googlemaps.Client(key=googleapikey)
-    print(gmaps)
-
+    gmaps = googlemaps.Client(key=googleapikey)
 
     for record in data:
-        target = ""
-        for key in keys:
-            target += f"{record[key]}"
+        target = " ".join([record[key] for key in keys])
 
         try:
             location = gmaps.geocode(target)[0]["geometry"]["location"]

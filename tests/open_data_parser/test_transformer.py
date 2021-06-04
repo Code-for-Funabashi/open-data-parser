@@ -48,6 +48,7 @@ class TestConcatStr(unittest.TestCase):
 @mock.patch("googlemaps.Client")
 class TestQueryCoordinateFromAddress(unittest.TestCase):
     def test_query_coordinate_from_address(self, client):
+        """Test query_coordinate_from_address() queries on a combined address """
 
         data = [{"key1": "hoge", "key2": "fuga"}]
 
