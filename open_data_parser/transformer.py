@@ -51,9 +51,7 @@ def query_coordinate_from_address(data: Iterator[Dict], keys: List[str]) -> Iter
 
 
     for record in data:
-        target = ""
-        for key in keys:
-            target += f"{record[key]} "
+        target = " ".join([record[key] for key in keys])
 
         try:
             location = gmaps.geocode(target)[0]["geometry"]["location"]
