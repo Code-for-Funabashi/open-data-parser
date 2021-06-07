@@ -1,6 +1,7 @@
 """ test for transformer.py """
 
 import unittest
+from unittest import mock
 
 import open_data_parser.transformer as target
 
@@ -42,3 +43,16 @@ class TestConcatStr(unittest.TestCase):
 
         actual = target.concat_str(data, key="target", value=value)
         self.assertEqual(list(actual), expected)
+
+
+@mock.patch("googlemaps.Client")
+class TestQueryCoordinateFromAddress(unittest.TestCase):
+    def test_query_coordinate_from_address(self, client):
+        """Test query_coordinate_from_address() queries on a combined address """
+
+        data = [{"key1": "hoge", "key2": "fuga"}]
+
+        result = target.query_coordinate_from_address(data, ["key1", "key2"])
+        result.__next__()
+
+        client.return_value.geocode.assert_called_once_with("hoge fuga")
