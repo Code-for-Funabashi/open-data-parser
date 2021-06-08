@@ -39,16 +39,17 @@ def concat_str(
         yield record
 
 
-def query_coordinate_from_address(data: Iterator[Dict], keys: List[str]) -> Iterator[Dict]:
+def query_coordinate_from_address(
+    data: Iterator[Dict], keys: List[str]
+) -> Iterator[Dict]:
     """Query the coordinate from the address.
-       GOOGLE_API_KEY is required because it uses googlemap's geocoding API
-       see: https://developers.google.com/maps/documentation/geocoding/overview
+    GOOGLE_API_KEY is required because it uses googlemap's geocoding API
+    see: https://developers.google.com/maps/documentation/geocoding/overview
     """
 
     assert os.environ.get("GOOGLE_API_KEY"), "Set your GOOGLE_API_KEY."
     googleapikey = os.environ["GOOGLE_API_KEY"]
     gmaps = googlemaps.Client(key=googleapikey)
-
 
     for record in data:
         target = " ".join([record[key] for key in keys])
@@ -62,9 +63,7 @@ def query_coordinate_from_address(data: Iterator[Dict], keys: List[str]) -> Iter
         yield record
 
 
-def overwrite(
-    data: Iterator[Dict], key: str, value: str
-) -> Iterator[Dict]:
+def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
     """Overwrite the target key"""
 
     for record in data:
