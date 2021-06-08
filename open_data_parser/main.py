@@ -136,6 +136,26 @@ TARGETS = [
             write_json, path="data/kosodate-map/", filename="kouminkan.json"
         ),
     ),
+    # 医療機関
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/iryokikan/iryokikan.csv",
+            schema=[
+                "address",
+                "name",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/iryokikan/", filename="iryokikan.json"
+        ),
+    ),
 ]
 
 
