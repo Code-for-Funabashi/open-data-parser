@@ -13,6 +13,7 @@ from open_data_parser.downloader import fetch_csv, read_csv
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
+from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
@@ -150,6 +151,7 @@ TARGETS = [
             skip_header,
             partial(concat_str, key="address", value="船橋市"),
             partial(query_coordinate_from_address, keys=["address", "name"]),
+            partial(overwrite, key="phone_number", value=""), # 元データに電話番号が無いので上書き
         ],
         formatter=format_to_point,
         writer=partial(

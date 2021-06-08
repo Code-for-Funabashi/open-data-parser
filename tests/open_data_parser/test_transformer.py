@@ -56,3 +56,25 @@ class TestQueryCoordinateFromAddress(unittest.TestCase):
         result.__next__()
 
         client.return_value.geocode.assert_called_once_with("hoge fuga")
+
+
+class TestOverwrite(unittest.TestCase):
+    def test_overwrite(self):
+        """Test overwrite() overwrites element."""
+
+        data = [{"key1": "hoge"}, {"key1": "fuga"}]
+
+        expected = [{"key1": "piyo"}, {"key1": "piyo"}]
+
+        actual = target.overwrite(data, key="key1", value="piyo")
+        self.assertEqual(list(actual), expected)
+
+    def test_overwrite_creates_new_elemet(self):
+        """Test overwrite() creates new element"""
+
+        data = [{"key1": "hoge"}, {"key1": "fuga"}]
+
+        expected = [{"key1": "hoge", "key2": "piyo"}, {"key1": "fuga", "key2": "piyo"}]
+
+        actual = target.overwrite(data, key="key2", value="piyo")
+        self.assertEqual(list(actual), expected)

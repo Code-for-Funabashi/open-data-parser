@@ -60,3 +60,13 @@ def query_coordinate_from_address(data: Iterator[Dict], keys: List[str]) -> Iter
             raise err
         record.update({"lat": location["lat"], "lng": location["lng"]})
         yield record
+
+
+def overwrite(
+    data: Iterator[Dict], key: str, value: str
+) -> Iterator[Dict]:
+    """Overwrite the target key"""
+
+    for record in data:
+        record[key] = value
+        yield record
