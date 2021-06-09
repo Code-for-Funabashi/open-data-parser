@@ -13,6 +13,7 @@ from open_data_parser.downloader import fetch_csv, read_csv
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
+from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
@@ -44,7 +45,13 @@ TARGETS = [
         reader=partial(
             fetch_csv,
             url="https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
-            schema=["name", "address", "phone_number", "capacity", "established_at",],
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
         ),
         transformers=[
             skip_header,
@@ -63,7 +70,13 @@ TARGETS = [
         reader=partial(
             fetch_csv,
             url="https://www.city.funabashi.lg.jp/opendata/002/p059793_d/fil/sirituhoikusyoitiran.csv",
-            schema=["name", "address", "phone_number", "capacity", "established_at",],
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
         ),
         transformers=[
             skip_header,
@@ -80,7 +93,13 @@ TARGETS = [
         reader=partial(
             fetch_csv,
             url="https://www.city.funabashi.lg.jp/opendata/002/p059791_d/fil/korituhoikusyoitiran.csv",
-            schema=["name", "address", "phone_number", "capacity", "established_at",],
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
         ),
         transformers=[
             skip_header,
@@ -97,7 +116,13 @@ TARGETS = [
         reader=partial(
             fetch_csv,
             url="https://www.city.funabashi.lg.jp/opendata/002/p059798_d/fil/ninteikodomoenitiran.csv",
-            schema=["name", "address", "phone_number", "capacity", "established_at",],
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
         ),
         transformers=[
             skip_header,
@@ -135,6 +160,25 @@ TARGETS = [
         writer=partial(
             write_json, path="data/kosodate-map/", filename="kouminkan.json"
         ),
+    ),
+    # 医療機関
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/iryokikan/iryokikan.csv",
+            schema=[
+                "address",
+                "name",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+            partial(overwrite, key="phone_number", value=""),  # 元データに電話番号が無いので上書き
+        ],
+        formatter=format_to_point,
+        writer=partial(write_json, path="data/iryokikan/", filename="iryokikan.json"),
     ),
 ]
 

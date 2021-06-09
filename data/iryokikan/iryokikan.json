@@ -1,0 +1,911 @@
+[
+  {
+    "name": "青山病院",
+    "lat": 35.704229,
+    "lng": 139.998972,
+    "details": {
+      "address": "船橋市市場4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "本田こどもクリニック",
+    "lat": 35.716595,
+    "lng": 140.041728,
+    "details": {
+      "address": "船橋市西習志野4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ささもと小児科",
+    "lat": 35.701664,
+    "lng": 140.020427,
+    "details": {
+      "address": "船橋市前原西6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "西船耳鼻咽喉科医院",
+    "lat": 35.7091638,
+    "lng": 139.9594212,
+    "details": {
+      "address": "船橋市印内町",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "西船医院",
+    "lat": 35.71382,
+    "lng": 139.9697717,
+    "details": {
+      "address": "船橋市西船2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "吉田医院",
+    "lat": 35.7018576,
+    "lng": 140.0205911,
+    "details": {
+      "address": "船橋市前原西6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "藤岡医院",
+    "lat": 35.707838,
+    "lng": 139.97094,
+    "details": {
+      "address": "船橋市海神5",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "まつうら内科",
+    "lat": 35.715223,
+    "lng": 139.97064,
+    "details": {
+      "address": "船橋市西船2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "船津医院",
+    "lat": 35.7033492,
+    "lng": 140.0262112,
+    "details": {
+      "address": "船橋市前原西8",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "なかむら内科消化器クリニック",
+    "lat": 35.7043686,
+    "lng": 139.9715415,
+    "details": {
+      "address": "船橋市海神6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "岩田内科循環器科",
+    "lat": 35.7089667,
+    "lng": 139.9600286,
+    "details": {
+      "address": "船橋市西船4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "いけだ病院",
+    "lat": 35.6926588,
+    "lng": 140.0255561,
+    "details": {
+      "address": "船橋市前原東1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "近藤クリニック",
+    "lat": 35.7072028,
+    "lng": 139.9574889,
+    "details": {
+      "address": "船橋市葛飾町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "葛葉クリニック",
+    "lat": 35.7087483,
+    "lng": 139.9583835,
+    "details": {
+      "address": "船橋市西船4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "井上クリニック",
+    "lat": 35.7015386,
+    "lng": 140.030256,
+    "details": {
+      "address": "船橋市前原東5",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ウェルビーイング内科クリニック",
+    "lat": 35.7274111,
+    "lng": 139.9726229,
+    "details": {
+      "address": "船橋市上山町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "つばさ在宅クリニック西船橋",
+    "lat": 35.7084963,
+    "lng": 139.9606602,
+    "details": {
+      "address": "船橋市西船4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "こばやしクリニック",
+    "lat": 35.695481,
+    "lng": 140.03318,
+    "details": {
+      "address": "船橋市前原東6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "法典クリニック",
+    "lat": 35.730307,
+    "lng": 139.967265,
+    "details": {
+      "address": "船橋市上山町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "西船内科",
+    "lat": 35.708924,
+    "lng": 139.958863,
+    "details": {
+      "address": "船橋市西船4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "山中医院",
+    "lat": 35.742695,
+    "lng": 140.002795,
+    "details": {
+      "address": "船橋市馬込町",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "若葉クリニック",
+    "lat": 35.7278482,
+    "lng": 139.9715823,
+    "details": {
+      "address": "船橋市上山町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "西船山本皮フ科",
+    "lat": 35.709466,
+    "lng": 139.958966,
+    "details": {
+      "address": "船橋市西船4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "さんいく会ファミリークリニック",
+    "lat": 35.7324993,
+    "lng": 140.0456105,
+    "details": {
+      "address": "船橋市松が丘1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "Kレディースクリニック",
+    "lat": 35.7070404,
+    "lng": 139.9836259,
+    "details": {
+      "address": "船橋市北本町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "山口病院",
+    "lat": 35.7094615,
+    "lng": 139.9554076,
+    "details": {
+      "address": "船橋市西船5",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "松が丘診療所",
+    "lat": 35.740776,
+    "lng": 140.046674,
+    "details": {
+      "address": "船橋市松が丘2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "やまなか小児科・内科",
+    "lat": 35.7200796,
+    "lng": 139.9798984,
+    "details": {
+      "address": "船橋市行田1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "いとう内科循環器科クリニック",
+    "lat": 35.7068665,
+    "lng": 140.0257115,
+    "details": {
+      "address": "船橋市二宮1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "坂口医院",
+    "lat": 35.747738,
+    "lng": 139.9866216,
+    "details": {
+      "address": "船橋市丸山1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "船橋行田クリニック",
+    "lat": 35.7180695,
+    "lng": 139.9706163,
+    "details": {
+      "address": "船橋市行田3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "かわい内科クリニック",
+    "lat": 35.6874837,
+    "lng": 139.9925008,
+    "details": {
+      "address": "船橋市浜町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "大島記念嬉泉病院",
+    "lat": 35.75222,
+    "lng": 140.033836,
+    "details": {
+      "address": "船橋市三咲3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "おぐち小児科",
+    "lat": 35.756393,
+    "lng": 140.023355,
+    "details": {
+      "address": "船橋市咲が丘3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "東京ベイサイドクリニック",
+    "lat": 35.6871705,
+    "lng": 139.9886235,
+    "details": {
+      "address": "船橋市浜町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "コミュニティクリニックみさき",
+    "lat": 35.7498823,
+    "lng": 140.0313646,
+    "details": {
+      "address": "船橋市三咲3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "矢島耳鼻咽喉科医院",
+    "lat": 35.718281,
+    "lng": 140.018561,
+    "details": {
+      "address": "船橋市芝山3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "船橋ベイサイド小児科",
+    "lat": 35.6861465,
+    "lng": 139.9902186,
+    "details": {
+      "address": "船橋市浜町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ほり内科クリニック",
+    "lat": 35.695786,
+    "lng": 139.982318,
+    "details": {
+      "address": "船橋市湊町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "しもやま内科",
+    "lat": 35.7224909,
+    "lng": 140.0234175,
+    "details": {
+      "address": "船橋市芝山4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "土居内科医院",
+    "lat": 35.7126476,
+    "lng": 139.9471823,
+    "details": {
+      "address": "船橋市東中山1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "南浜診療所",
+    "lat": 35.6964868,
+    "lng": 139.979024,
+    "details": {
+      "address": "船橋市南本町",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "高根木戸診療所",
+    "lat": 35.729366,
+    "lng": 140.040031,
+    "details": {
+      "address": "船橋市高根台4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "いのまたこどもクリニック",
+    "lat": 35.699094,
+    "lng": 140.004219,
+    "details": {
+      "address": "船橋市東船橋1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "吉沼医院",
+    "lat": 35.736582,
+    "lng": 140.0249471,
+    "details": {
+      "address": "船橋市南三咲1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "高根台病院",
+    "lat": 35.7314216,
+    "lng": 140.0355143,
+    "details": {
+      "address": "船橋市高根台4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "有田クリニック",
+    "lat": 35.701602,
+    "lng": 140.004983,
+    "details": {
+      "address": "船橋市東船橋3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "佐々木医院",
+    "lat": 35.737449,
+    "lng": 140.02204,
+    "details": {
+      "address": "船橋市南三咲2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "東船橋病院",
+    "lat": 35.7306773,
+    "lng": 140.0412332,
+    "details": {
+      "address": "船橋市高根台4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "安西クリニック",
+    "lat": 35.698702,
+    "lng": 140.005244,
+    "details": {
+      "address": "船橋市東船橋4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "滝不動病院",
+    "lat": 35.737046,
+    "lng": 140.027237,
+    "details": {
+      "address": "船橋市南三咲4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "妹尾内科",
+    "lat": 35.7279331,
+    "lng": 140.0334563,
+    "details": {
+      "address": "船橋市高根台6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "馬込沢クリニック",
+    "lat": 35.7422835,
+    "lng": 139.991739,
+    "details": {
+      "address": "船橋市藤原7",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "志村医院",
+    "lat": 35.6959992,
+    "lng": 140.054741,
+    "details": {
+      "address": "船橋市三山8",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "やまと内科小児科クリニック",
+    "lat": 35.7295079,
+    "lng": 140.0298343,
+    "details": {
+      "address": "船橋市高根台7",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "みやもとクリニック",
+    "lat": 35.6991821,
+    "lng": 139.983385,
+    "details": {
+      "address": "船橋市本町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "及川医院",
+    "lat": 35.69663870000001,
+    "lng": 140.0614076,
+    "details": {
+      "address": "船橋市三山9",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "戸張クリニック",
+    "lat": 35.702539,
+    "lng": 140.047312,
+    "details": {
+      "address": "船橋市田喜野井7",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "森田クリニック",
+    "lat": 35.700044,
+    "lng": 139.982448,
+    "details": {
+      "address": "船橋市本町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "やぐち内科クリニック",
+    "lat": 35.696073,
+    "lng": 139.99038,
+    "details": {
+      "address": "船橋市宮本2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "しまね内科クリニック",
+    "lat": 35.728828,
+    "lng": 140.059871,
+    "details": {
+      "address": "船橋市坪井東1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "やすまクリニック",
+    "lat": 35.700125,
+    "lng": 139.985893,
+    "details": {
+      "address": "船橋市本町1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "くりはら内科・皮膚科クリニック",
+    "lat": 35.6916836,
+    "lng": 139.9961377,
+    "details": {
+      "address": "船橋市宮本4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "たいようこどもクリニック",
+    "lat": 35.729203,
+    "lng": 140.059923,
+    "details": {
+      "address": "船橋市坪井東2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "板倉病院",
+    "lat": 35.6974906,
+    "lng": 139.9826113,
+    "details": {
+      "address": "船橋市本町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "寺田医院",
+    "lat": 35.6971186,
+    "lng": 139.9951937,
+    "details": {
+      "address": "船橋市宮本6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ジーク夏見クリニック",
+    "lat": 35.7283445,
+    "lng": 140.022379,
+    "details": {
+      "address": "船橋市夏見1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "加藤医院",
+    "lat": 35.698225,
+    "lng": 139.982171,
+    "details": {
+      "address": "船橋市本町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ぜんり歯科内科クリニック",
+    "lat": 35.689947,
+    "lng": 139.998957,
+    "details": {
+      "address": "船橋市宮本8",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "トレポンテこどもクリニック",
+    "lat": 35.7210756,
+    "lng": 139.9972357,
+    "details": {
+      "address": "船橋市夏見町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "高木医院",
+    "lat": 35.6985326,
+    "lng": 139.9831842,
+    "details": {
+      "address": "船橋市本町2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "下総中山整形外科クリニック",
+    "lat": 35.7143692,
+    "lng": 139.9441766,
+    "details": {
+      "address": "船橋市本中山2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "愛育レディースクリニック",
+    "lat": 35.6977118,
+    "lng": 140.0620586,
+    "details": {
+      "address": "船橋市習志野5",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "田中外科・肛門科クリニック",
+    "lat": 35.696597,
+    "lng": 139.985612,
+    "details": {
+      "address": "船橋市本町3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "たかざわ医院",
+    "lat": 35.710918,
+    "lng": 140.037749,
+    "details": {
+      "address": "船橋市薬園台6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "鳥海内科",
+    "lat": 35.727539,
+    "lng": 140.035123,
+    "details": {
+      "address": "船橋市習志野台1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "小野内科医院",
+    "lat": 35.707621,
+    "lng": 139.981832,
+    "details": {
+      "address": "船橋市本町7",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "薬円台眼科",
+    "lat": 35.7119533,
+    "lng": 140.0396427,
+    "details": {
+      "address": "船橋市薬園台6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "北習志野耳鼻咽喉科・アレルギー科",
+    "lat": 35.7220893,
+    "lng": 140.0420781,
+    "details": {
+      "address": "船橋市習志野台2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "東武塚田クリニック",
+    "lat": 35.7227437,
+    "lng": 139.9831241,
+    "details": {
+      "address": "船橋市前貝塚町",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "薬園台さかいクリニック",
+    "lat": 35.7125445,
+    "lng": 140.0370477,
+    "details": {
+      "address": "船橋市薬園台6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "習志野台整形外科内科",
+    "lat": 35.728832,
+    "lng": 140.039645,
+    "details": {
+      "address": "船橋市習志野台2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "クリニック津田沼",
+    "lat": 35.6929017,
+    "lng": 140.019397,
+    "details": {
+      "address": "船橋市前原西2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "薬円台泌尿器科腎クリニック",
+    "lat": 35.7102584,
+    "lng": 140.0376129,
+    "details": {
+      "address": "船橋市薬園台6",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "花輪病院附属駅前クリニック",
+    "lat": 35.7218337,
+    "lng": 140.0419488,
+    "details": {
+      "address": "船橋市習志野台2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "津田沼診療所",
+    "lat": 35.692823,
+    "lng": 140.020057,
+    "details": {
+      "address": "船橋市前原西2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "ドクターランド船橋",
+    "lat": 35.7123321,
+    "lng": 139.9778879,
+    "details": {
+      "address": "船橋市山手1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "きたなら駅ビル内科クリニック",
+    "lat": 35.721292,
+    "lng": 140.042198,
+    "details": {
+      "address": "船橋市習志野台3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "津田沼ヒフ科",
+    "lat": 35.6918957,
+    "lng": 140.0205734,
+    "details": {
+      "address": "船橋市前原西2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "山﨑内科外科クリニック",
+    "lat": 35.7155616,
+    "lng": 139.9751889,
+    "details": {
+      "address": "船橋市山手1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "北習志野えんどう内科",
+    "lat": 35.719359,
+    "lng": 140.044073,
+    "details": {
+      "address": "船橋市習志野台3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "深沢医院",
+    "lat": 35.692689,
+    "lng": 140.019801,
+    "details": {
+      "address": "船橋市前原西2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "新船橋みみはなのどクリニック",
+    "lat": 35.7159115,
+    "lng": 139.9791887,
+    "details": {
+      "address": "船橋市山手3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "山岡内科クリニック",
+    "lat": 35.719537,
+    "lng": 140.04615,
+    "details": {
+      "address": "船橋市習志野台3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "平安堂内科",
+    "lat": 35.693275,
+    "lng": 140.021154,
+    "details": {
+      "address": "船橋市前原西2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "つかさクリニック",
+    "lat": 35.7159693,
+    "lng": 139.9791693,
+    "details": {
+      "address": "船橋市山手3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "共立習志野台病院",
+    "lat": 35.71859,
+    "lng": 140.04539,
+    "details": {
+      "address": "船橋市習志野台4",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "前原医院",
+    "lat": 35.6973305,
+    "lng": 140.0245532,
+    "details": {
+      "address": "船橋市前原西3",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "南船橋クリニック",
+    "lat": 35.6796059,
+    "lng": 139.9930098,
+    "details": {
+      "address": "船橋市若松2",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "水井医院",
+    "lat": 35.721056,
+    "lng": 140.034804,
+    "details": {
+      "address": "船橋市西習志野1",
+      "phone_number": ""
+    }
+  },
+  {
+    "name": "高地内科",
+    "lat": 35.7223701,
+    "lng": 140.0405578,
+    "details": {
+      "address": "船橋市西習志野3",
+      "phone_number": ""
+    }
+  }
+]
