@@ -1,6 +1,6 @@
 [
     {
-        "type": "MultiPolygon",
+        "type": "samplePolygon",
         "coordinates": [
             [35.693722, 139.9815],
             [35.693722, 139.9835],
