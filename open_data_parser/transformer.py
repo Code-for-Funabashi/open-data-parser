@@ -1,6 +1,6 @@
 """transformer"""
 
-from typing import Callable
+from typing import Callable, Tuple
 from typing import Dict
 from typing import List
 from typing import Iterator
@@ -69,3 +69,15 @@ def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
     for record in data:
         record[key] = value
         yield record
+
+
+def set_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
+    """ reverse 'lonlat' order to 'latlon' one """
+    reset_order_to_latlon = lambda lon_lat: lon_lat[::-1]
+    
+    for record in data:
+        coordinates: Tuple = record[coordinates_key]
+        record[coordinates_key] = list(map(reset_order_to_latlon, coordinates))
+        yield record
+
+

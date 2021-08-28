@@ -9,14 +9,15 @@ from typing import Callable
 
 from typing import TypedDict
 
-from open_data_parser.downloader import fetch_csv, read_csv
+from open_data_parser.downloader import fetch_csv, read_csv, read_shapefile
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import overwrite
+from open_data_parser.transformer import set_latlon_order
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
-from open_data_parser.formatter import format_to_point
+from open_data_parser.formatter import format_to_point, format_to_polygon
 
 
 OUTPUT_BASE_PATH = "./data"
@@ -180,13 +181,24 @@ TARGETS = [
         formatter=format_to_point,
         writer=partial(write_json, path="data/iryokikan/", filename="iryokikan.json"),
     ),
+    Target(
+        reader=partial(
+            read_shapefile,
+            path="./input/kosodate-map/polygon-gakku/A27-16_12.shp",
+        ),
+        transformers=[
+            partial(set_latlon_order, coordinates_key="coordinates"),
+        ],
+        formatter=format_to_polygon,
+        writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
+    )
 ]
 
 
 def main():
     """main"""
 
-    shutil.rmtree(OUTPUT_BASE_PATH)
+    # shutil.rmtree(OUTPUT_BASE_PATH)
     for target in TARGETS:
         raw_data = target["reader"]()
 
