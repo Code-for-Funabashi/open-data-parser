@@ -23,7 +23,7 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     """
     return csv.DictReader(open(path, "r"), schema)
 
-def read_shapefile(path: str) -> Iterator[Dict]:
+def read_shapefile(path: str) -> Iterator[shapefile.ShapeRecord]:
     """
     localに配置させたcsv fileからデータを読み込み、
     国土数値情報shapefileのスキーマのデータを返却する
@@ -43,14 +43,9 @@ def read_shapefile(path: str) -> Iterator[Dict]:
                 ]
                 ```
     """
+    # TODO:
+    # List[shapefile.ShapeRecord]を返り値に設定
+    # 各recordのtransform処理をtransformerに任せる。
     shape = shapefile.Reader(path, encoding="sjis")
     features = shape.shapeRecords()
-    data_list = []
-    for feat in features:
-        record = {}
-        record["name"] = feat.record[1] + " " + feat.record[2]
-        record["coordinates"] = feat.shape.points
-
-        data_list.append(record)
-
-    return data_list
+    return features

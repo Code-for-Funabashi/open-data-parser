@@ -5,7 +5,7 @@ from typing import Dict
 from typing import List
 from typing import Iterator
 import os
-
+import shapefile
 import googlemaps
 
 from open_data_parser.logger import logger
@@ -76,8 +76,45 @@ def set_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dic
     reset_order_to_latlon = lambda lon_lat: lon_lat[::-1]
     
     for record in data:
-        coordinates: Tuple = record[coordinates_key]
+        coordinates = record[coordinates_key]
         record[coordinates_key] = list(map(reset_order_to_latlon, coordinates))
         yield record
+
+
+def shapeRecord2dict(
+    features: Iterator[shapefile.ShapeRecord],
+    schema: Dict
+    ) -> Iterator[Dict]:
+    # schema
+    # {
+    #   "name": ["A27_006", "A27_007"],
+    #   "inst_subject": ["A27_006"],
+    #   "address": ["A27_008"]
+    # }
+    
+    for feat in features:
+        record = {}
+        for k, feat_keys in schema.items():
+            feat_record: Dict = feat.record.as_dict()
+            record[k] = " ".join([ feat_record[feat_k] for feat_k in feat_keys ])
+        record["coordinates"] = feat.shape.points
+        
+        yield record
+
+
+def filter_rows(
+    features: Iterator[Dict],
+    filter_key: str,
+    filter_value: str
+    ):
+
+    """Skip the records which are not targeted."""
+
+    for feat in features:
+        if feat[filter_key] == filter_value:
+            # data_list.append(feat)
+            yield feat
+        else:
+            pass
 
 
