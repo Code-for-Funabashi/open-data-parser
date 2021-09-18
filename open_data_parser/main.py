@@ -42,145 +42,145 @@ class Target(TypedDict):
 
 TARGETS = [
     # # 小規模保育園
-    # Target(
-    #     reader=partial(
-    #         fetch_csv,
-    #         url="https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
-    #         schema=[
-    #             "name",
-    #             "address",
-    #             "phone_number",
-    #             "capacity",
-    #             "established_at",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json,
-    #         path=f"{OUTPUT_BASE_PATH}/kosodate-map/",
-    #         filename="syokibohoikuichiran.json",
-    #     ),
-    # ),
-    # # 私立保育園
-    # Target(
-    #     reader=partial(
-    #         fetch_csv,
-    #         url="https://www.city.funabashi.lg.jp/opendata/002/p059793_d/fil/sirituhoikusyoitiran.csv",
-    #         schema=[
-    #             "name",
-    #             "address",
-    #             "phone_number",
-    #             "capacity",
-    #             "established_at",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json, path="data/kosodate-map/", filename="sirituhoikusyoitiran.json"
-    #     ),
-    # ),
-    # # 公立保育園
-    # Target(
-    #     reader=partial(
-    #         fetch_csv,
-    #         url="https://www.city.funabashi.lg.jp/opendata/002/p059791_d/fil/korituhoikusyoitiran.csv",
-    #         schema=[
-    #             "name",
-    #             "address",
-    #             "phone_number",
-    #             "capacity",
-    #             "established_at",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json, path="data/kosodate-map/", filename="korituhoikusyoitiran.json"
-    #     ),
-    # ),
-    # # 認定こども園
-    # Target(
-    #     reader=partial(
-    #         fetch_csv,
-    #         url="https://www.city.funabashi.lg.jp/opendata/002/p059798_d/fil/ninteikodomoenitiran.csv",
-    #         schema=[
-    #             "name",
-    #             "address",
-    #             "phone_number",
-    #             "capacity",
-    #             "established_at",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json, path="data/kosodate-map/", filename="ninteikodomoenitiran.json"
-    #     ),
-    # ),
-    # # 公民館
-    # Target(
-    #     reader=partial(
-    #         read_csv,
-    #         path="./input/kosodate-map/kouminkan.csv",
-    #         schema=[
-    #             "id",
-    #             "area",
-    #             "name",
-    #             "name_hurigana",
-    #             "phone_number",
-    #             "FAX_number",
-    #             "zip_code",
-    #             "address",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(concat_str, key="name", value="公民館", from_left=False),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json, path="data/kosodate-map/", filename="kouminkan.json"
-    #     ),
-    # ),
-    # # 医療機関
-    # Target(
-    #     reader=partial(
-    #         read_csv,
-    #         path="./input/iryokikan/iryokikan.csv",
-    #         schema=[
-    #             "address",
-    #             "name",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #         partial(overwrite, key="phone_number", value=""),  # 元データに電話番号が無いので上書き
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(write_json, path="data/iryokikan/", filename="iryokikan.json"),
-    # ),
+    Target(
+        reader=partial(
+            fetch_csv,
+            url="https://www.city.funabashi.lg.jp/opendata/002/p059795_d/fil/syokibohoikuichiran.csv",
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json,
+            path=f"{OUTPUT_BASE_PATH}/kosodate-map/",
+            filename="syokibohoikuichiran.json",
+        ),
+    ),
+    # 私立保育園
+    Target(
+        reader=partial(
+            fetch_csv,
+            url="https://www.city.funabashi.lg.jp/opendata/002/p059793_d/fil/sirituhoikusyoitiran.csv",
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="sirituhoikusyoitiran.json"
+        ),
+    ),
+    # 公立保育園
+    Target(
+        reader=partial(
+            fetch_csv,
+            url="https://www.city.funabashi.lg.jp/opendata/002/p059791_d/fil/korituhoikusyoitiran.csv",
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="korituhoikusyoitiran.json"
+        ),
+    ),
+    # 認定こども園
+    Target(
+        reader=partial(
+            fetch_csv,
+            url="https://www.city.funabashi.lg.jp/opendata/002/p059798_d/fil/ninteikodomoenitiran.csv",
+            schema=[
+                "name",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="ninteikodomoenitiran.json"
+        ),
+    ),
+    # 公民館
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/kosodate-map/kouminkan.csv",
+            schema=[
+                "id",
+                "area",
+                "name",
+                "name_hurigana",
+                "phone_number",
+                "FAX_number",
+                "zip_code",
+                "address",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(concat_str, key="name", value="公民館", from_left=False),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="kouminkan.json"
+        ),
+    ),
+    # 医療機関
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/iryokikan/iryokikan.csv",
+            schema=[
+                "address",
+                "name",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+            partial(overwrite, key="phone_number", value=""),  # 元データに電話番号が無いので上書き
+        ],
+        formatter=format_to_point,
+        writer=partial(write_json, path="data/iryokikan/", filename="iryokikan.json"),
+    ),
     Target(
         reader=partial(
             read_shapefile,
@@ -194,6 +194,10 @@ TARGETS = [
                     "inst_subject": ["A27_006"],
                     "address": ["A27_008"]
                 }
+                # shapefileの属性情報から
+                # A27_006: 小学校の設置主体(ex:船橋市立)
+                # A27_007: 小学校の名称
+                # from https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-v2_1.html
             ),
             partial(
                 filter_rows, 

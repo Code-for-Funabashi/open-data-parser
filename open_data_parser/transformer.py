@@ -85,12 +85,9 @@ def shapeRecord2dict(
     features: Iterator[shapefile.ShapeRecord],
     schema: Dict
     ) -> Iterator[Dict]:
-    # schema
-    # {
-    #   "name": ["A27_006", "A27_007"],
-    #   "inst_subject": ["A27_006"],
-    #   "address": ["A27_008"]
-    # }
+    """
+    shapefile.shapeRecordデータをdict形式に変換する。
+    """
     
     for feat in features:
         record = {}
@@ -103,17 +100,16 @@ def shapeRecord2dict(
 
 
 def filter_rows(
-    features: Iterator[Dict],
+    data: Iterator[Dict],
     filter_key: str,
     filter_value: str
-    ):
+    )-> Iterator[Dict]:
 
     """Skip the records which are not targeted."""
 
-    for feat in features:
-        if feat[filter_key] == filter_value:
-            # data_list.append(feat)
-            yield feat
+    for record in data:
+        if record[filter_key] == filter_value:
+            yield record
         else:
             pass
 

@@ -28,7 +28,7 @@ def read_shapefile(path: str) -> Iterator[shapefile.ShapeRecord]:
     localに配置させたcsv fileからデータを読み込み、
     国土数値情報shapefileのスキーマのデータを返却する
     Output: Iterator[Dict]
-        keys:
+        keys of Dict:
             name:
             (example) ['12100', '千葉市立', 'こてはし台小学校', '千葉市花見川区こてはし台2-28-1']
 
@@ -43,9 +43,6 @@ def read_shapefile(path: str) -> Iterator[shapefile.ShapeRecord]:
                 ]
                 ```
     """
-    # TODO:
-    # List[shapefile.ShapeRecord]を返り値に設定
-    # 各recordのtransform処理をtransformerに任せる。
     shape = shapefile.Reader(path, encoding="sjis")
     features = shape.shapeRecords()
     return features

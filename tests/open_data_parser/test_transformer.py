@@ -78,3 +78,18 @@ class TestOverwrite(unittest.TestCase):
 
         actual = target.overwrite(data, key="key2", value="piyo")
         self.assertEqual(list(actual), expected)
+
+
+class TestFilterRows(unittest.TestCase):
+    def test_filter_rows(self):
+        """Test filter_rows() filters elements."""
+
+        data = [
+            {"key1": "hoge", "key2": "funa"}, 
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+
+        expected = [{"key1": "hoge", "key2": "funa"}]
+
+        actual = target.filter_rows(data, filter_key="key2", filter_value="funa")
+        self.assertEqual(list(actual), expected)
