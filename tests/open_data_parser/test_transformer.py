@@ -93,3 +93,23 @@ class TestFilterRows(unittest.TestCase):
 
         actual = target.filter_rows(data, filter_key="key2", filter_value="funa")
         self.assertEqual(list(actual), expected)
+
+
+class TestSetLatLonOrder(unittest.TestCase):
+    def test_set_latlon_order(self):
+        data = [
+        { "name": "船橋市立 海神小学校",
+            "coordinates": [
+                [139.984168, 35.708842],
+                [139.982974, 35.708799],
+            ]
+        }]
+        expected = [
+        { "name": "船橋市立 海神小学校",
+            "coordinates": [
+                [35.708842, 139.984168],
+                [35.708799, 139.982974],
+            ]
+        }]
+        actual = target.set_latlon_order(data, coordinates_key="coordinates")
+        self.assertEqual(list(actual), expected)

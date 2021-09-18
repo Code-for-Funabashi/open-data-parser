@@ -41,7 +41,7 @@ class Target(TypedDict):
 
 
 TARGETS = [
-    # # 小規模保育園
+    # 小規模保育園
     Target(
         reader=partial(
             fetch_csv,
