@@ -215,7 +215,7 @@ TARGETS = [
 def main():
     """main"""
 
-    # shutil.rmtree(OUTPUT_BASE_PATH)
+    shutil.rmtree(OUTPUT_BASE_PATH)
     for target in TARGETS:
         
         raw_data = target["reader"]()
