@@ -68,12 +68,11 @@ def fetch_shapefile(
     # shapefile.shapeRecords to List[Dict]
     for feat in features:
         record: Dict = feat.record.as_dict()
+        original_keys = record.keys()
         record.update({"coordinates": feat.shape.points})
         record.update({"shape_parts": feat.shape.parts})
-        # 既存string valueを持つkeysのconcat処理をfetch時に組み込んでみました。
-        # 必要ない場合は、指定しなければreformed_schemaに空dictが渡され、この処理はskipされるようにしました。
-        for new_key, original_keys in reformed_schema.items():
-            record[new_key] = " ".join([record[key] for key in original_keys])
+        for new_key, old_keys in reformed_schema.items():
+            record[new_key] = " ".join([record[key] for key in old_keys])
         # delete original keys
         for key in original_keys:
             record.pop(key)
