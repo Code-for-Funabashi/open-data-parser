@@ -1,6 +1,6 @@
 """transformer"""
 
-from typing import Callable, Tuple
+from typing import Callable
 from typing import Dict
 from typing import List
 from typing import Iterator
@@ -70,7 +70,7 @@ def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
         yield record
 
 
-def set_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
+def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
     """ reverse 'lonlat' order to 'latlon' one """
     reset_order_to_latlon = lambda lon_lat: lon_lat[::-1]
     for record in data:
@@ -89,8 +89,6 @@ def filter_rows(
     for record in data:
         if record[filter_key] == filter_value:
             yield record
-        else:
-            pass
 
 def sort_exteriors_and_holes(data: Iterator[Dict]):
     """ sort polygon's coordinates into exteriors' and holes' coords """

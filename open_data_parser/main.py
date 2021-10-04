@@ -9,16 +9,20 @@ from typing import Callable
 
 from typing import TypedDict
 
-from open_data_parser.downloader import fetch_csv, read_csv, fetch_shapefile
+from open_data_parser.downloader import fetch_csv
+from open_data_parser.downloader import read_csv
+from open_data_parser.downloader import fetch_shapefile
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import sort_exteriors_and_holes
-from open_data_parser.transformer import set_latlon_order, filter_rows
+from open_data_parser.transformer import set_latlon_order
+from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
-from open_data_parser.formatter import format_to_point, format_to_polygon
+from open_data_parser.formatter import format_to_point
+from open_data_parser.formatter import format_to_polygon
 
 
 OUTPUT_BASE_PATH = "./data"
