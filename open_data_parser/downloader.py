@@ -24,12 +24,10 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     """
     return csv.DictReader(open(path, "r"), schema)
 
+
 def fetch_shapefile(
-    url: str,
-    shp_fname: str,
-    dbf_fname: str,
-    reformed_schema:Dict={}
-    ) -> Iterator[Dict]:
+    url: str, shp_fname: str, dbf_fname: str, reformed_schema: Dict = {}
+) -> Iterator[Dict]:
     """
     urlからshapefileの含まれた、zipデータを読み込み、
     shapefileのスキーマを再編して辞書データを返却する
@@ -65,22 +63,18 @@ def fetch_shapefile(
         with zipfile.ZipFile(io.BytesIO(content)) as f:
             shp = f.open(shp_fname)
             dbf = f.open(dbf_fname)
-            reader = shapefile.Reader(
-                shp=shp,
-                dbf=dbf,
-                encoding="sjis"
-            )
+            reader = shapefile.Reader(shp=shp, dbf=dbf, encoding="sjis")
     features = reader.shapeRecords()
     # shapefile.shapeRecords to List[Dict]
     for feat in features:
         record: Dict = feat.record.as_dict()
-        record.update({ "coordinates": feat.shape.points })
-        record.update({ "shape_parts": feat.shape.parts })
+        record.update({"coordinates": feat.shape.points})
+        record.update({"shape_parts": feat.shape.parts})
         # 既存string valueを持つkeysのconcat処理をfetch時に組み込んでみました。
         # 必要ない場合は、指定しなければreformed_schemaに空dictが渡され、この処理はskipされるようにしました。
         for new_key, original_keys in reformed_schema.items():
-            record[new_key] = " ".join([ record[key] for key in original_keys ])
+            record[new_key] = " ".join([record[key] for key in original_keys])
         # delete original keys
         for key in original_keys:
-            record.pop(key) 
+            record.pop(key)
         yield record

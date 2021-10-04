@@ -71,7 +71,7 @@ def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
 
 
 def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
-    """ reverse 'lonlat' order to 'latlon' one """
+    """reverse 'lonlat' order to 'latlon' one"""
     reset_order_to_latlon = lambda lon_lat: lon_lat[::-1]
     for record in data:
         coordinates = record[coordinates_key]
@@ -80,22 +80,22 @@ def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator
 
 
 def filter_rows(
-    data: Iterator[Dict],
-    filter_key: str,
-    filter_value: str
-    )-> Iterator[Dict]:
+    data: Iterator[Dict], filter_key: str, filter_value: str
+) -> Iterator[Dict]:
 
     """Skip the records which are not targeted."""
     for record in data:
         if record[filter_key] == filter_value:
             yield record
 
+
 def sort_exteriors_and_holes(data: Iterator[Dict]):
-    """ sort polygon's coordinates into exteriors' and holes' coords """
+    """sort polygon's coordinates into exteriors' and holes' coords"""
     for record in data:
         parts = [i for i in record["shape_parts"]] + [len(record["coordinates"]) - 1]
         exteriors_and_holes = [
-            record["coordinates"][parts[i]:parts[i + 1]] for i in range(len(parts) - 1)
+            record["coordinates"][parts[i] : parts[i + 1]]
+            for i in range(len(parts) - 1)
         ]
         record["coordinates"] = exteriors_and_holes
         yield record

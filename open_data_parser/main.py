@@ -193,23 +193,19 @@ TARGETS = [
             shp_fname="A27-10_12-g_SchoolDistrict.shp",
             dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
             reformed_schema={
-                "name":['A27_006', 'A27_007'],
-                "institution_type":['A27_006'],
-                "address":['A27_008'],
-                }
+                "name": ["A27_006", "A27_007"],
+                "institution_type": ["A27_006"],
+                "address": ["A27_008"],
+            },
         ),
         transformers=[
-            partial(
-                filter_rows, 
-                filter_key="institution_type", 
-                filter_value="船橋市立"
-            ),
+            partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
             partial(set_latlon_order, coordinates_key="coordinates"),
             sort_exteriors_and_holes,
         ],
         formatter=format_to_polygon,
         writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
-    )
+    ),
 ]
 
 
@@ -217,7 +213,7 @@ def main():
     """main"""
     shutil.rmtree(OUTPUT_BASE_PATH)
     for target in TARGETS:
-        
+
         raw_data = target["reader"]()
 
         transformed = transform(target["transformers"], raw_data)

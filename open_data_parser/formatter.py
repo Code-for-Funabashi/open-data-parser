@@ -26,7 +26,4 @@ def format_to_polygon(records: Iterator[Dict]) -> Iterator[Dict]:
       To: List[List[(point_1), (point_2), ... ,(point_n)]]
     """
     for row in records:
-        yield {
-            "name": row["name"],
-            "coordinates": [row["coordinates"]]
-        }
+        yield {"name": row["name"], "coordinates": [row["coordinates"]]}
