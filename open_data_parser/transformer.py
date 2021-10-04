@@ -72,10 +72,9 @@ def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
 
 def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
     """reverse 'lonlat' order to 'latlon' one"""
-    reset_order_to_latlon = lambda lon_lat: lon_lat[::-1]
     for record in data:
         coordinates = record[coordinates_key]
-        record[coordinates_key] = list(map(reset_order_to_latlon, coordinates))
+        record[coordinates_key] = list(map(lambda coord: coord[::-1], coordinates))
         yield record
 
 
