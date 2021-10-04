@@ -95,8 +95,8 @@ class TestFilterRows(unittest.TestCase):
         self.assertEqual(list(actual), expected)
 
 
-class TestSetLatLonOrder(unittest.TestCase):
-    def test_set_latlon_order(self):
+class TestReverseLatLonOrder(unittest.TestCase):
+    def test_reverse_latlon_order(self):
         data = [
         { "name": "船橋市立 海神小学校",
             "coordinates": [
@@ -111,5 +111,5 @@ class TestSetLatLonOrder(unittest.TestCase):
                 [35.708799, 139.982974],
             ]
         }]
-        actual = target.set_latlon_order(data, coordinates_key="coordinates")
+        actual = target.reverse_latlon_order(data, coordinates_key="coordinates")
         self.assertEqual(list(actual), expected)
