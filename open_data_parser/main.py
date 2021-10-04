@@ -9,12 +9,13 @@ from typing import Callable
 
 from typing import TypedDict
 
-from open_data_parser.downloader import fetch_csv, read_csv, read_shapefile
+from open_data_parser.downloader import fetch_csv, read_csv, fetch_shapefile
 from open_data_parser.transformer import transform
 from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import overwrite
-from open_data_parser.transformer import set_latlon_order, filter_rows, shapeRecord2dict
+from open_data_parser.transformer import sort_exteriors_and_holes
+from open_data_parser.transformer import set_latlon_order, filter_rows
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point, format_to_polygon
@@ -183,28 +184,24 @@ TARGETS = [
     ),
     Target(
         reader=partial(
-            read_shapefile,
-            path="./input/kosodate-map/polygon-gakku/A27-10_12-g_SchoolDistrict.shp",
+            fetch_shapefile,
+            url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
+            shp_fname="A27-10_12-g_SchoolDistrict.shp",
+            dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
+            reformed_schema={
+                "name":['A27_006', 'A27_007'],
+                "institution_type":['A27_006'],
+                "address":['A27_008'],
+                }
         ),
         transformers=[
             partial(
-                shapeRecord2dict,
-                schema={
-                    "name": ["A27_006", "A27_007"],
-                    "inst_subject": ["A27_006"],
-                    "address": ["A27_008"]
-                }
-                # shapefileの属性情報から
-                # A27_006: 小学校の設置主体(ex:船橋市立)
-                # A27_007: 小学校の名称
-                # from https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A27-v2_1.html
-            ),
-            partial(
                 filter_rows, 
-                filter_key="inst_subject", 
+                filter_key="institution_type", 
                 filter_value="船橋市立"
             ),
             partial(set_latlon_order, coordinates_key="coordinates"),
+            sort_exteriors_and_holes,
         ],
         formatter=format_to_polygon,
         writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
@@ -214,7 +211,6 @@ TARGETS = [
 
 def main():
     """main"""
-
     shutil.rmtree(OUTPUT_BASE_PATH)
     for target in TARGETS:
         

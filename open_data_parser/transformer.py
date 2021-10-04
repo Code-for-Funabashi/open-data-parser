@@ -5,7 +5,6 @@ from typing import Dict
 from typing import List
 from typing import Iterator
 import os
-import shapefile
 import googlemaps
 
 from open_data_parser.logger import logger
@@ -80,24 +79,6 @@ def set_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dic
         yield record
 
 
-def shapeRecord2dict(
-    features: Iterator[shapefile.ShapeRecord],
-    schema: Dict
-    ) -> Iterator[Dict]:
-    """
-    shapefile.shapeRecordデータをdict形式に変換する。
-    """
-    
-    for feat in features:
-        record = {}
-        for k, feat_keys in schema.items():
-            feat_record: Dict = feat.record.as_dict()
-            record[k] = " ".join([ feat_record[feat_k] for feat_k in feat_keys ])
-        record["coordinates"] = feat.shape.points
-        
-        yield record
-
-
 def filter_rows(
     data: Iterator[Dict],
     filter_key: str,
@@ -105,11 +86,18 @@ def filter_rows(
     )-> Iterator[Dict]:
 
     """Skip the records which are not targeted."""
-
     for record in data:
         if record[filter_key] == filter_value:
             yield record
         else:
             pass
 
-
+def sort_exteriors_and_holes(data: Iterator[Dict]):
+    """ sort polygon's coordinates into exteriors' and holes' coords """
+    for record in data:
+        parts = [i for i in record["shape_parts"]] + [len(record["coordinates"]) - 1]
+        exteriors_and_holes = [
+            record["coordinates"][parts[i]:parts[i + 1]] for i in range(len(parts) - 1)
+        ]
+        record["coordinates"] = exteriors_and_holes
+        yield record
