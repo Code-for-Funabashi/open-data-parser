@@ -8,6 +8,8 @@ import io
 from typing import Dict
 from typing import List
 from typing import Iterator
+from shapely.geometry import shape
+from shapely.geometry import mapping
 
 
 def fetch_csv(url: str, schema: List[str]) -> Iterator[Dict]:
@@ -67,13 +69,13 @@ def fetch_shapefile(
     features = reader.shapeRecords()
     # shapefile.shapeRecords to List[Dict]
     for feat in features:
-        record: Dict = feat.record.as_dict()
-        original_keys = record.keys()
-        record.update({"coordinates": feat.shape.points})
-        record.update({"shape_parts": feat.shape.parts})
+        out_dict = {}
+        _geo_obj = shape(feat.shape.__geo_interface__)
+
+        record = feat.record.as_dict()
+
+        # _geo_obj(地物タイプ情報と、座標情報)をrecordにマージ
+        out_dict.update(mapping(_geo_obj))
         for new_key, old_keys in reformed_schema.items():
-            record[new_key] = " ".join([record[key] for key in old_keys])
-        # delete original keys
-        for key in original_keys:
-            record.pop(key)
-        yield record
+            out_dict[new_key] = " ".join([record[key] for key in old_keys])
+        yield out_dict

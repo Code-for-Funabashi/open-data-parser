@@ -17,7 +17,7 @@ from open_data_parser.transformer import skip_header
 from open_data_parser.transformer import concat_str
 from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import sort_exteriors_and_holes
-from open_data_parser.transformer import set_latlon_order
+from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
@@ -200,8 +200,7 @@ TARGETS = [
         ),
         transformers=[
             partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
-            partial(set_latlon_order, coordinates_key="coordinates"),
-            sort_exteriors_and_holes,
+            partial(reverse_latlon_order, coordinates_key="coordinates"),
         ],
         formatter=format_to_polygon,
         writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
