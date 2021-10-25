@@ -100,15 +100,19 @@ class TestReverseLatLonOrder(unittest.TestCase):
         data = [
         { "name": "船橋市立 海神小学校",
             "coordinates": [
+                [
                 [139.984168, 35.708842],
                 [139.982974, 35.708799],
+                ]
             ]
         }]
         expected = [
         { "name": "船橋市立 海神小学校",
             "coordinates": [
+                [
                 [35.708842, 139.984168],
                 [35.708799, 139.982974],
+                ]
             ]
         }]
         actual = target.reverse_latlon_order(data, coordinates_key="coordinates")
