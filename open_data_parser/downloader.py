@@ -1,6 +1,5 @@
 """Download Data"""
 import csv
-from json.encoder import py_encode_basestring
 import shapefile
 from urllib import request
 import zipfile
@@ -27,38 +26,9 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     return csv.DictReader(open(path, "r"), schema)
 
 
-def fetch_shapefile(
-    url: str, shp_fname: str, dbf_fname: str, reformed_schema: Dict = {}
-) -> Iterator[Dict]:
+def unzip_shapefile(url: str, shp_fname: str, dbf_fname: str) -> shapefile.ShapeRecords:
     """
-    urlからshapefileの含まれた、zipデータを読み込み、
-    shapefileのスキーマを再編して辞書データを返却する
-
-    ## shapefileのスキーマの再編に関して
-    例：国土数値情報の場合、地物情報が下記のように格納されているとする。
-        sample_data = {
-            'A27_005': '12100',
-            'A27_006': '千葉市立',
-            'A27_007': 'こてはし台小学校',
-            'A27_008': '千葉市花見川区こてはし台2-28-1'
-        }
-    こちらを、reformed_schema引数を用いて、下記のように
-    old_keysをconcatして、new_keyを作れるような処理を追加している、
-    reformed_schema={
-        "new_key": [key for key in old_keys]
-    }
-    例：
-    reformed_schema = {
-        "name":['A27_006', 'A27_007'],
-        "institution_type":['A27_006'],
-        "address":['A27_008'],
-    }
-    すると、sample_dataは、下記のように読み込まれる
-    reformated_sample_data = {
-        'name': '千葉市立 こてはし台小学校',
-        'institution_type': '千葉市立',
-        'address': '千葉市花見川区こてはし台2-28-1'
-    }
+    urlからzipファイルをダウンロードし、shapeRecordsを返す
     """
     with request.urlopen(url) as response:
         content = response.read()
@@ -66,16 +36,42 @@ def fetch_shapefile(
             shp = f.open(shp_fname)
             dbf = f.open(dbf_fname)
             reader = shapefile.Reader(shp=shp, dbf=dbf, encoding="sjis")
-    features = reader.shapeRecords()
-    # shapefile.shapeRecords to List[Dict]
-    for feat in features:
-        out_dict = {}
-        _geo_obj = shape(feat.shape.__geo_interface__)
+    return reader.shapeRecords()
 
-        record = feat.record.as_dict()
 
-        # _geo_obj(地物タイプ情報と、座標情報)をrecordにマージ
-        out_dict.update(mapping(_geo_obj))
-        for new_key, old_keys in reformed_schema.items():
-            out_dict[new_key] = " ".join([record[key] for key in old_keys])
-        yield out_dict
+def combine_keys(data: Dict, new_schema: Dict[str, List[str]]) -> Dict:
+    """
+    複数のkeysの要素を結合して、new_keyを作る
+    args:
+        data: Dict
+        new_schema: Dict
+    example:
+        input:
+            - data = {"A": "val_a", "B": "val_b"}
+            - new_schema = {"AB": ["A", "B"]}
+        return:
+            {"AB": "val_a val_b"}
+    """
+    output = {}
+    for new_key, old_keys in new_schema.items():
+        output[new_key] = " ".join([data[key] for key in old_keys])
+    return output
+
+
+def fetch_shapefile(
+    url: str, shp_fname: str, dbf_fname: str, reformed_schema: Dict = {}
+) -> Iterator[Dict]:
+    """
+    urlからshapefileの含まれた、zipデータを読み込み、
+    shapefileのスキーマを再編して辞書データを返却する
+    """
+    features = unzip_shapefile(url, shp_fname, dbf_fname)
+    for feature in features:
+        output = {}
+        coords = shape(feature.shape.__geo_interface__)
+        # add coords
+        output.update(mapping(coords))
+        # add formatted feature-info
+        record = feature.record.as_dict()
+        output.update(combine_keys(record, reformed_schema))
+        yield output
