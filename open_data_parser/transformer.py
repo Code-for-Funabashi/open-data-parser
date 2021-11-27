@@ -87,15 +87,3 @@ def filter_rows(
     for record in data:
         if record[filter_key] == filter_value:
             yield record
-
-
-def sort_exteriors_and_holes(data: Iterator[Dict]):
-    """sort polygon's coordinates into exteriors' and holes' coords"""
-    for record in data:
-        parts = [i for i in record["shape_parts"]] + [len(record["coordinates"]) - 1]
-        exteriors_and_holes = [
-            record["coordinates"][parts[i] : parts[i + 1]]
-            for i in range(len(parts) - 1)
-        ]
-        record["coordinates"] = exteriors_and_holes
-        yield record
