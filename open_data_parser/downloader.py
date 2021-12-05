@@ -42,15 +42,14 @@ def unzip_shapefile(url: str, shp_fname: str, dbf_fname: str) -> shapefile.Shape
 def combine_keys(data: Dict, new_schema: Dict[str, List[str]]) -> Dict:
     """
     複数のkeysの要素を結合して、new_keyを作る
-    args:
+    Args:
         data: Dict
+            example: {"A": "val_a", "B": "val_b"}
         new_schema: Dict
-    example:
-        input:
-            - data = {"A": "val_a", "B": "val_b"}
-            - new_schema = {"AB": ["A", "B"]}
-        return:
-            {"AB": "val_a val_b"}
+            example: {"AB": ["A", "B"]}
+    Returns:
+        Dict:
+            example: {"AB": "val_a val_b"}
     """
     output = {}
     for new_key, old_keys in new_schema.items():
