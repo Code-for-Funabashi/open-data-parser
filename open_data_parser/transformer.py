@@ -5,7 +5,7 @@ from typing import Dict
 from typing import List
 from typing import Iterator
 import os
-
+import json
 import googlemaps
 
 from open_data_parser.logger import logger
@@ -69,3 +69,21 @@ def overwrite(data: Iterator[Dict], key: str, value: str) -> Iterator[Dict]:
     for record in data:
         record[key] = value
         yield record
+
+
+def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator[Dict]:
+    """reverse 'lonlat' order to 'latlon' one"""
+    for record in data:
+        coord_exteriors_and_holes = record[coordinates_key]
+        record[coordinates_key] = [list(map(lambda coord: coord[::-1], coords)) for coords in coord_exteriors_and_holes]
+        yield record
+
+
+def filter_rows(
+    data: Iterator[Dict], filter_key: str, filter_value: str
+) -> Iterator[Dict]:
+
+    """Skip the records which are not targeted."""
+    for record in data:
+        if record[filter_key] == filter_value:
+            yield record
