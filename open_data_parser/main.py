@@ -93,29 +93,29 @@ TARGETS = [
             write_json, path="data/kosodate-map/", filename="sirituhoikusyoitiran.json"
         ),
     ),
-    # 公立保育園
-    Target(
-        reader=partial(
-            fetch_csv,
-            url="https://www.city.funabashi.lg.jp/opendata/002/p059791_d/fil/korituhoikusyoitiran.csv",
-            schema=[
-                "name",
-                "address",
-                "phone_number",
-                "capacity",
-                "established_at",
-            ],
-        ),
-        transformers=[
-            skip_header,
-            partial(concat_str, key="address", value="船橋市"),
-            partial(query_coordinate_from_address, keys=["address", "name"]),
-        ],
-        formatter=format_to_point,
-        writer=partial(
-            write_json, path="data/kosodate-map/", filename="korituhoikusyoitiran.json"
-        ),
-    ),
+    # # 公立保育園
+    # Target(
+    #     reader=partial(
+    #         fetch_csv,
+    #         url="https://www.city.funabashi.lg.jp/opendata/002/p059791_d/fil/korituhoikusyoitiran.csv",
+    #         schema=[
+    #             "name",
+    #             "address",
+    #             "phone_number",
+    #             "capacity",
+    #             "established_at",
+    #         ],
+    #     ),
+    #     transformers=[
+    #         skip_header,
+    #         partial(concat_str, key="address", value="船橋市"),
+    #         partial(query_coordinate_from_address, keys=["address", "name"]),
+    #     ],
+    #     formatter=format_to_point,
+    #     writer=partial(
+    #         write_json, path="data/kosodate-map/", filename="korituhoikusyoitiran.json"
+    #     ),
+    # ),
     # 認定こども園
     Target(
         reader=partial(
@@ -184,6 +184,68 @@ TARGETS = [
         ],
         formatter=format_to_point,
         writer=partial(write_json, path="data/iryokikan/", filename="iryokikan.json"),
+    ),
+    Target(
+        reader=partial(
+            fetch_shapefile,
+            url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
+            shp_fname="A27-10_12-g_SchoolDistrict.shp",
+            dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
+            reformed_schema={
+                "name": ["A27_006", "A27_007"],
+                "institution_type": ["A27_006"],
+                "address": ["A27_008"],
+            },
+        ),
+        transformers=[
+            partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
+            partial(reverse_latlon_order, coordinates_key="coordinates"),
+        ],
+        formatter=format_to_polygon,
+        writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
+    ),
+    # 保育園空き状況
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/kosodate-map/保育園情報（公開情報加工）.csv",
+            schema=[
+                "number",
+                "name",
+                "address",
+                "lng",
+                "lat",
+                "phone_number",
+                "capacity",
+                "established_at",
+                "waiting_0yo",
+                "waiting_1yo",
+                "waiting_2yo",
+                "waiting_3yo",
+                "waiting_4yo",
+                "waiting_5yo",
+            ],
+        ),
+        transformers=[skip_header, partial(overwrite, key="phone_number", value="")],
+        formatter=partial(
+            format_to_point,
+            details_schema=[
+                "number",
+                "address",
+                "phone_number",
+                "capacity",
+                "established_at",
+                "waiting_0yo",
+                "waiting_1yo",
+                "waiting_2yo",
+                "waiting_3yo",
+                "waiting_4yo",
+                "waiting_5yo",
+            ],
+        ),
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="korituhoikusyoitiran.json"
+        ),
     ),
     Target(
         reader=partial(
