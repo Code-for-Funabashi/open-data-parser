@@ -19,6 +19,9 @@ from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import query_coordinate_from_address
+from open_data_parser.transformer import transform_point_crs
+from open_data_parser.transformer import WGS84_EPSG
+from open_data_parser.transformer import TOKYO_EPSG
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
 from open_data_parser.formatter import format_to_polygon
@@ -221,8 +224,8 @@ TARGETS = [
                 "katagaki",
                 "lat",
                 "lng",
-                "access"
-                "parking"
+                "access",
+                "parking",
                 "phone_number",
                 "naisen_phone_number",
                 "fax_number",
@@ -247,7 +250,16 @@ TARGETS = [
                 "waiting_all_yo",
             ],
         ),
-        transformers=[skip_header, partial(overwrite, key="phone_number", value="")],
+        transformers=[
+            skip_header,
+            partial(
+                transform_point_crs,
+                lat_key="lat",
+                lng_key="lng",
+                from_epsg=TOKYO_EPSG,
+                to_epsg=WGS84_EPSG,
+            ),
+        ],
         formatter=partial(
             format_to_point,
             details_schema=[
@@ -263,9 +275,7 @@ TARGETS = [
                 "waiting_5yo",
             ],
         ),
-        writer=partial(
-            write_json, path="data/kosodate-map/", filename="hoikuen.json"
-        ),
+        writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
     ),
     Target(
         reader=partial(

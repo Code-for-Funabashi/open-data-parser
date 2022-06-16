@@ -15,6 +15,10 @@ from shapely.geometry import Point
 from open_data_parser.logger import logger
 
 
+WGS84_EPSG = 4326 # 世界測地系
+TOKYO_EPSG = 4301 # 日本測地系
+
+
 def transform(
     transformers: List[Callable[[Iterator[Dict]], Iterator[Dict]]], data: Iterator[Dict]
 ) -> Iterator[Dict]:
@@ -114,7 +118,7 @@ def transform_point_crs(
 
     for record in data:
 
-        point = Point(record[lng_key], record[lat_key])
+        point = Point(float(record[lng_key]), float(record[lat_key]))
         trans_point = Point(transformer.itransform(point.coords, switch=True))
         record[lng_key] = trans_point.x
         record[lat_key] = trans_point.y
