@@ -1,12 +1,16 @@
 """transformer"""
 
+from typing import Any
 from typing import Callable
 from typing import Dict
 from typing import List
 from typing import Iterator
 import os
 import json
+
 import googlemaps
+from pyproj import Transformer
+from shapely.geometry import Point
 
 from open_data_parser.logger import logger
 
@@ -75,7 +79,10 @@ def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator
     """reverse 'lonlat' order to 'latlon' one"""
     for record in data:
         coord_exteriors_and_holes = record[coordinates_key]
-        record[coordinates_key] = [list(map(lambda coord: coord[::-1], coords)) for coords in coord_exteriors_and_holes]
+        record[coordinates_key] = [
+            list(map(lambda coord: coord[::-1], coords))
+            for coords in coord_exteriors_and_holes
+        ]
         yield record
 
 
@@ -87,3 +94,29 @@ def filter_rows(
     for record in data:
         if record[filter_key] == filter_value:
             yield record
+
+
+def transform_point_crs(
+    data: Iterator[Dict], lat_key: str, lng_key: str, from_epsg: int, to_epsg: int
+) -> Iterator[Dict]:
+    """EPSGコードにおけるポイント座標変換
+
+    Args:
+        point (Point): 座標変換元LineString
+        from_epsg (int): 変換元EPSGコード
+        to_epsg (int): 変換先EPSGコード
+
+    Returns:
+        Point: 座標変換後Point
+    """
+
+    transformer = Transformer.from_crs(from_epsg, to_epsg)
+
+    for record in data:
+
+        point = Point(record[lng_key], record[lat_key])
+        trans_point = Point(transformer.itransform(point.coords, switch=True))
+        record[lng_key] = trans_point.x
+        record[lat_key] = trans_point.y
+
+        yield record
