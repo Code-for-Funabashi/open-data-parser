@@ -19,6 +19,8 @@ from open_data_parser.transformer import overwrite
 from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import query_coordinate_from_address
+from open_data_parser.transformer import skip_rows
+from open_data_parser.transformer import rename_key
 from open_data_parser.transformer import transform_point_crs
 from open_data_parser.transformer import WGS84_EPSG
 from open_data_parser.transformer import TOKYO_EPSG
@@ -248,17 +250,15 @@ TARGETS = [
                 "waiting_4yo",
                 "waiting_5yo",
                 "waiting_all_yo",
+                "lng_bodik",
+                "lat_bodik",
             ],
         ),
         transformers=[
             skip_header,
-            partial(
-                transform_point_crs,
-                lat_key="lat",
-                lng_key="lng",
-                from_epsg=TOKYO_EPSG,
-                to_epsg=WGS84_EPSG,
-            ),
+            partial(skip_rows, filter_key="lng_bodik", value=""),
+            partial(rename_key, from_="lng_bodik", to="lng"),
+            partial(rename_key, from_="lat_bodik", to="lat"),
         ],
         formatter=partial(
             format_to_point,

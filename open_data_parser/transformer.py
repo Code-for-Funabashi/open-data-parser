@@ -15,8 +15,8 @@ from shapely.geometry import Point
 from open_data_parser.logger import logger
 
 
-WGS84_EPSG = 4326 # 世界測地系
-TOKYO_EPSG = 6668 # 日本測地系
+WGS84_EPSG = 4326  # 世界測地系
+TOKYO_EPSG = 6668  # 日本測地系
 
 
 def transform(
@@ -93,11 +93,20 @@ def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator
 def filter_rows(
     data: Iterator[Dict], filter_key: str, filter_value: str
 ) -> Iterator[Dict]:
-
     """Skip the records which are not targeted."""
+
     for record in data:
         if record[filter_key] == filter_value:
             yield record
+
+
+def skip_rows(data: Iterator[Dict], filter_key: str, value: Any) -> Iterator[Dict]:
+    """Skip if the value of the target key is given value"""
+
+    for record in data:
+        if record[filter_key] == value:
+            continue
+        yield record
 
 
 def transform_point_crs(
@@ -122,5 +131,14 @@ def transform_point_crs(
         trans_point = Point(transformer.itransform(point.coords, switch=True))
         record[lng_key] = trans_point.x
         record[lat_key] = trans_point.y
+
+        yield record
+
+
+def rename_key(data: Iterator[Dict], from_: str, to: str) -> Iterator[Dict]:
+
+    for record in data:
+        record[to] = record[from_]
+        del record[from_]
 
         yield record
