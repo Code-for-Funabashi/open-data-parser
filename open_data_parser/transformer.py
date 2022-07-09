@@ -11,6 +11,10 @@ import googlemaps
 from open_data_parser.logger import logger
 
 
+WGS84_EPSG = 4326  # 世界測地系
+TOKYO_EPSG = 6668  # 日本測地系
+
+
 def transform(
     transformers: List[Callable[[Iterator[Dict]], Iterator[Dict]]], data: Iterator[Dict]
 ) -> Iterator[Dict]:
