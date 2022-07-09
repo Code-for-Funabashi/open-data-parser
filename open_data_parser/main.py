@@ -250,8 +250,8 @@ TARGETS = [
                 "waiting_4yo",
                 "waiting_5yo",
                 "waiting_all_yo",
-                "lng_bodik",
                 "lat_bodik",
+                "lng_bodik",
             ],
         ),
         transformers=[
