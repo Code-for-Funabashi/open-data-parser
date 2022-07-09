@@ -6,12 +6,8 @@ from typing import Dict
 from typing import List
 from typing import Iterator
 import os
-import json
 
 import googlemaps
-from pyproj import Transformer
-from shapely.geometry import Point
-
 from open_data_parser.logger import logger
 
 
@@ -109,33 +105,8 @@ def skip_rows(data: Iterator[Dict], filter_key: str, value: Any) -> Iterator[Dic
         yield record
 
 
-def transform_point_crs(
-    data: Iterator[Dict], lat_key: str, lng_key: str, from_epsg: int, to_epsg: int
-) -> Iterator[Dict]:
-    """EPSGコードにおけるポイント座標変換
-
-    Args:
-        point (Point): 座標変換元LineString
-        from_epsg (int): 変換元EPSGコード
-        to_epsg (int): 変換先EPSGコード
-
-    Returns:
-        Point: 座標変換後Point
-    """
-
-    transformer = Transformer.from_crs(from_epsg, to_epsg)
-
-    for record in data:
-
-        point = Point(float(record[lng_key]), float(record[lat_key]))
-        trans_point = Point(transformer.itransform(point.coords, switch=True))
-        record[lng_key] = trans_point.x
-        record[lat_key] = trans_point.y
-
-        yield record
-
-
 def rename_key(data: Iterator[Dict], from_: str, to: str) -> Iterator[Dict]:
+    """Rename keys"""
 
     for record in data:
         record[to] = record[from_]

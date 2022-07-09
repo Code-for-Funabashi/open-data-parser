@@ -123,15 +123,33 @@ class TestReverseLatLonOrder(unittest.TestCase):
         self.assertEqual(list(actual), expected)
 
 
-class TestTransformPointCrs(unittest.TestCase):
+class TestSkipRows(unittest.TestCase):
 
+    def test_skip_rows(self):
+        data = [
+            {"key1": "hoge", "key2": "funa"},
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+        expected = [
+            {"key1": "fuga", "key2": "bashi"},
+        ]
 
-    def test_transform_point_crs(self):
-        wgs84_epsg = 4326
-        tokyo_epsg = 4301
-        data = [{"lng": 138.385554841666, "lat": 34.9748902437125}]
+        actual = target.skip_rows(data, "key1", "hoge")
 
-        expected = [{"lng": 138.38246584906943, "lat": 34.978172333217344}]
+        self.assertEqual(list(actual), expected)
 
-        actual = target.transform_point_crs(data, "lat", "lng", tokyo_epsg, wgs84_epsg)
+class TestRenameKey(unittest.TestCase):
+
+    def test_rename_key(self):
+        data = [
+            {"key1": "hoge", "key2": "funa"},
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+        expected = [
+            {"key1": "hoge", "renamed_key": "funa"},
+            {"key1": "fuga", "renamed_key": "bashi"},
+        ]
+
+        actual = target.rename_key(data, "key2", "renamed_key")
+
         self.assertEqual(list(actual), expected)
