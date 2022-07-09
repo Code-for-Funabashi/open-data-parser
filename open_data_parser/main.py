@@ -99,6 +99,7 @@ TARGETS = [
                 "number",
                 "address",
                 "phone_number",
+                "type",
                 "capacity",
                 "acceptable_age",
                 "waiting_0yo",
