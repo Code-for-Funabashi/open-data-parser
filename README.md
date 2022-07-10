@@ -9,16 +9,17 @@ poetry install
 ## Requirement
 - Python 3.8 or later
 - poetry 1.0 or later
-- GOOGLE_API_KEY
-    - GCPの[geocoding API][geocoding]の利用が許可されたAPIキー
 
 [geocoding]: https://developers.google.com/maps/documentation/geocoding/overview
 
 ## Usage
+
+1. 入力データを [input ディレクトリ](./input)に格納する
+
+2. 入力データのメタ情報を[meta.yml](./input/meta.yml)に格納する
+
+3. 以下のコマンドを実行する
 ```bash
-# GOOGLE_API_KEYを環境変数に設定する
-export GOOGLE_API_KEY="Your GOOGLE API KEY"
-# open_data_parser/main.pyファイル内のTARGET変数を設定し、下記のコマンドを実行する
 poetry run python open_data_parser/main.py
 ```
 

@@ -19,6 +19,7 @@ from open_data_parser.transformer import rename_key
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
 from open_data_parser.formatter import format_to_polygon
+from open_data_parser.writer import create_json_from_yaml
 
 
 OUTPUT_BASE_PATH = "./data"
@@ -147,6 +148,9 @@ def main():
 
         target["writer"](data=list(formatted))
 
+
+    # create metadata
+    create_json_from_yaml("input/meta.yml", "data", "meta.json")
 
 if __name__ == "__main__":
     main()
