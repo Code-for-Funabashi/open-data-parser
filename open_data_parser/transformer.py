@@ -1,13 +1,13 @@
 """transformer"""
 
+from typing import Any
 from typing import Callable
 from typing import Dict
 from typing import List
 from typing import Iterator
 import os
-import json
-import googlemaps
 
+import googlemaps
 from open_data_parser.logger import logger
 
 
@@ -75,15 +75,37 @@ def reverse_latlon_order(data: Iterator[Dict], coordinates_key: str) -> Iterator
     """reverse 'lonlat' order to 'latlon' one"""
     for record in data:
         coord_exteriors_and_holes = record[coordinates_key]
-        record[coordinates_key] = [list(map(lambda coord: coord[::-1], coords)) for coords in coord_exteriors_and_holes]
+        record[coordinates_key] = [
+            list(map(lambda coord: coord[::-1], coords))
+            for coords in coord_exteriors_and_holes
+        ]
         yield record
 
 
 def filter_rows(
     data: Iterator[Dict], filter_key: str, filter_value: str
 ) -> Iterator[Dict]:
-
     """Skip the records which are not targeted."""
+
     for record in data:
         if record[filter_key] == filter_value:
             yield record
+
+
+def skip_rows(data: Iterator[Dict], filter_key: str, value: Any) -> Iterator[Dict]:
+    """Skip if the value of the target key is given value"""
+
+    for record in data:
+        if record[filter_key] == value:
+            continue
+        yield record
+
+
+def rename_key(data: Iterator[Dict], from_: str, to: str) -> Iterator[Dict]:
+    """Rename keys"""
+
+    for record in data:
+        record[to] = record[from_]
+        del record[from_]
+
+        yield record

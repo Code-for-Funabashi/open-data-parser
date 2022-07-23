@@ -48,7 +48,7 @@ class TestConcatStr(unittest.TestCase):
 @mock.patch("googlemaps.Client")
 class TestQueryCoordinateFromAddress(unittest.TestCase):
     def test_query_coordinate_from_address(self, client):
-        """Test query_coordinate_from_address() queries on a combined address """
+        """Test query_coordinate_from_address() queries on a combined address"""
 
         data = [{"key1": "hoge", "key2": "fuga"}]
 
@@ -85,7 +85,7 @@ class TestFilterRows(unittest.TestCase):
         """Test filter_rows() filters elements."""
 
         data = [
-            {"key1": "hoge", "key2": "funa"}, 
+            {"key1": "hoge", "key2": "funa"},
             {"key1": "fuga", "key2": "bashi"},
         ]
 
@@ -98,22 +98,58 @@ class TestFilterRows(unittest.TestCase):
 class TestReverseLatLonOrder(unittest.TestCase):
     def test_reverse_latlon_order(self):
         data = [
-        { "name": "船橋市立 海神小学校",
-            "coordinates": [
-                [
-                [139.984168, 35.708842],
-                [139.982974, 35.708799],
-                ]
-            ]
-        }]
+            {
+                "name": "船橋市立 海神小学校",
+                "coordinates": [
+                    [
+                        [139.984168, 35.708842],
+                        [139.982974, 35.708799],
+                    ]
+                ],
+            }
+        ]
         expected = [
-        { "name": "船橋市立 海神小学校",
-            "coordinates": [
-                [
-                [35.708842, 139.984168],
-                [35.708799, 139.982974],
-                ]
-            ]
-        }]
+            {
+                "name": "船橋市立 海神小学校",
+                "coordinates": [
+                    [
+                        [35.708842, 139.984168],
+                        [35.708799, 139.982974],
+                    ]
+                ],
+            }
+        ]
         actual = target.reverse_latlon_order(data, coordinates_key="coordinates")
+        self.assertEqual(list(actual), expected)
+
+
+class TestSkipRows(unittest.TestCase):
+
+    def test_skip_rows(self):
+        data = [
+            {"key1": "hoge", "key2": "funa"},
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+        expected = [
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+
+        actual = target.skip_rows(data, "key1", "hoge")
+
+        self.assertEqual(list(actual), expected)
+
+class TestRenameKey(unittest.TestCase):
+
+    def test_rename_key(self):
+        data = [
+            {"key1": "hoge", "key2": "funa"},
+            {"key1": "fuga", "key2": "bashi"},
+        ]
+        expected = [
+            {"key1": "hoge", "renamed_key": "funa"},
+            {"key1": "fuga", "renamed_key": "bashi"},
+        ]
+
+        actual = target.rename_key(data, "key2", "renamed_key")
+
         self.assertEqual(list(actual), expected)
