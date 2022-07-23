@@ -10,12 +10,12 @@
       "type": "認定こども園（保育所型）",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "1",
-      "waiting_2yo": "0",
-      "waiting_3yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
-      "waiting_5yo": "0"
+      "waiting_5yo": "1"
     }
   },
   {
@@ -29,8 +29,8 @@
       "type": "認定こども園（保育所型）",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
-      "waiting_1yo": "3",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -48,9 +48,9 @@
       "type": "認定こども園（保育所型）",
       "capacity": "318",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -67,8 +67,8 @@
       "type": "認定こども園（保育所型）",
       "capacity": "79",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "3",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -76,7 +76,7 @@
     }
   },
   {
-    "name": "幼保連携型認定こども園　大浜幼稚園",
+    "name": "認定こども園大浜幼稚園",
     "lat": "35.713386",
     "lng": "140.046072",
     "details": {
@@ -86,9 +86,9 @@
       "type": "認定こども園（幼保連携型）",
       "capacity": "208",
       "acceptable_age": "1歳～5歳",
-      "waiting_0yo": "",
-      "waiting_1yo": "2",
-      "waiting_2yo": "0",
+      "waiting_0yo": "*",
+      "waiting_1yo": "0",
+      "waiting_2yo": "3",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -105,8 +105,8 @@
       "type": "認定こども園（保育所型）",
       "capacity": "111",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "24",
-      "waiting_1yo": "5",
+      "waiting_0yo": "2",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -124,16 +124,16 @@
       "type": "認定こども園（保育所型）",
       "capacity": "210",
       "acceptable_age": "1歳～5歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "2",
-      "waiting_2yo": "3",
+      "waiting_2yo": "1",
       "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "幼保連携型認定こども園　二和ひつじ幼稚園",
+    "name": "二和ひつじ幼稚園",
     "lat": "35.755106",
     "lng": "140.024883",
     "details": {
@@ -143,9 +143,9 @@
       "type": "認定こども園（幼保連携型）",
       "capacity": "144",
       "acceptable_age": "3歳～5歳",
-      "waiting_0yo": "",
-      "waiting_1yo": "",
-      "waiting_2yo": "",
+      "waiting_0yo": "*",
+      "waiting_1yo": "*",
+      "waiting_2yo": "*",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -162,9 +162,9 @@
       "type": "認定こども園（保育所型）",
       "capacity": "41",
       "acceptable_age": "3歳～5歳",
-      "waiting_0yo": "",
-      "waiting_1yo": "",
-      "waiting_2yo": "",
+      "waiting_0yo": "*",
+      "waiting_1yo": "*",
+      "waiting_2yo": "*",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -181,12 +181,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -201,11 +201,11 @@
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
       "waiting_0yo": "0",
-      "waiting_1yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -219,12 +219,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -238,12 +238,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -260,9 +260,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -276,12 +276,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -295,18 +295,18 @@
       "type": "小規模保育所",
       "capacity": "18",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
-    "name": "京進のほいくえんHOPPA船橋駅園",
-    "lat": "35.699251",
-    "lng": "139.988553",
+    "name": "京進のほいくえん　HOPPA船橋駅園",
+    "lat": "35.7010301",
+    "lng": "139.9904967",
     "details": {
       "number": "17",
       "address": "千葉県船橋市本町4-7-17",
@@ -314,16 +314,16 @@
       "type": "小規模保育所",
       "capacity": "12",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
-    "name": "京進のほいくえんHOPPA津田沼園",
+    "name": "京進のほいくえん　HOPPA津田沼園",
     "lat": "35.692672",
     "lng": "140.019084",
     "details": {
@@ -333,12 +333,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -352,12 +352,12 @@
       "type": "小規模保育所",
       "capacity": "15",
       "acceptable_age": "1歳～2歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "0",
-      "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_2yo": "1",
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -371,12 +371,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "2",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -393,9 +393,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -412,9 +412,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -431,9 +431,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -448,11 +448,11 @@
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
       "waiting_0yo": "2",
-      "waiting_1yo": "7",
-      "waiting_2yo": "1",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_1yo": "1",
+      "waiting_2yo": "3",
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -466,16 +466,16 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
-    "name": "ココファン・ナーサリー西船橋",
+    "name": "Gakkenほいくえん 西船橋",
     "lat": "35.708669",
     "lng": "139.948837",
     "details": {
@@ -488,9 +488,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -507,13 +507,13 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
-    "name": "リップル保育園西船橋",
+    "name": "リップル保育園　西船橋",
     "lat": "35.707227",
     "lng": "139.956057",
     "details": {
@@ -523,12 +523,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -542,12 +542,12 @@
       "type": "小規模保育所",
       "capacity": "18",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -561,12 +561,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -580,12 +580,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "0",
-      "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_2yo": "1",
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -599,12 +599,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -621,9 +621,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -640,13 +640,13 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
-    "name": "保育ルームサンライズ船橋",
+    "name": "保育ルーム　サンライズ船橋",
     "lat": "35.700845",
     "lng": "139.982058",
     "details": {
@@ -656,12 +656,12 @@
       "type": "小規模保育所",
       "capacity": "18",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -678,9 +678,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -694,12 +694,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
-      "waiting_1yo": "0",
+      "waiting_0yo": "1",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "0",
+      "waiting_4yo": "0",
+      "waiting_5yo": "0"
     }
   },
   {
@@ -716,9 +716,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -732,12 +732,12 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
-      "waiting_0yo": "",
+      "waiting_0yo": "*",
       "waiting_1yo": "0",
-      "waiting_2yo": "1",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_2yo": "0",
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -752,11 +752,11 @@
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
       "waiting_0yo": "0",
-      "waiting_1yo": "2",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -770,9 +770,9 @@
       "type": "公立保育園",
       "capacity": "126",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
-      "waiting_2yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -789,7 +789,7 @@
       "type": "公立保育園",
       "capacity": "168",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -808,12 +808,12 @@
       "type": "公立保育園",
       "capacity": "168",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
-      "waiting_1yo": "3",
-      "waiting_2yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
-      "waiting_5yo": "0"
+      "waiting_5yo": "1"
     }
   },
   {
@@ -827,7 +827,7 @@
       "type": "公立保育園",
       "capacity": "277",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
+      "waiting_0yo": "2",
       "waiting_1yo": "2",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
@@ -846,11 +846,11 @@
       "type": "公立保育園",
       "capacity": "213",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "15",
-      "waiting_1yo": "3",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "1",
-      "waiting_4yo": "1",
+      "waiting_3yo": "0",
+      "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
@@ -865,9 +865,9 @@
       "type": "公立保育園",
       "capacity": "209",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "9",
-      "waiting_1yo": "2",
-      "waiting_2yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -884,10 +884,10 @@
       "type": "公立保育園",
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "11",
-      "waiting_1yo": "2",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "2",
-      "waiting_3yo": "1",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -903,9 +903,9 @@
       "type": "公立保育園",
       "capacity": "244",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "21",
-      "waiting_1yo": "1",
-      "waiting_2yo": "0",
+      "waiting_0yo": "3",
+      "waiting_1yo": "2",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -922,8 +922,8 @@
       "type": "公立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -941,10 +941,10 @@
       "type": "公立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
+      "waiting_0yo": "1",
       "waiting_1yo": "2",
-      "waiting_2yo": "2",
-      "waiting_3yo": "0",
+      "waiting_2yo": "1",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -960,11 +960,11 @@
       "type": "公立保育園",
       "capacity": "155",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "9",
-      "waiting_1yo": "0",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "1",
-      "waiting_4yo": "0",
+      "waiting_4yo": "1",
       "waiting_5yo": "0"
     }
   },
@@ -979,11 +979,11 @@
       "type": "公立保育園",
       "capacity": "163",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "31",
-      "waiting_1yo": "3",
-      "waiting_2yo": "8",
-      "waiting_3yo": "0",
-      "waiting_4yo": "0",
+      "waiting_0yo": "6",
+      "waiting_1yo": "16",
+      "waiting_2yo": "1",
+      "waiting_3yo": "4",
+      "waiting_4yo": "1",
       "waiting_5yo": "0"
     }
   },
@@ -998,8 +998,8 @@
       "type": "公立保育園",
       "capacity": "201",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "12",
-      "waiting_1yo": "7",
+      "waiting_0yo": "0",
+      "waiting_1yo": "4",
       "waiting_2yo": "2",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1017,12 +1017,12 @@
       "type": "公立保育園",
       "capacity": "147",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "13",
-      "waiting_1yo": "2",
-      "waiting_2yo": "4",
+      "waiting_0yo": "3",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "1",
-      "waiting_4yo": "1",
-      "waiting_5yo": "1"
+      "waiting_4yo": "0",
+      "waiting_5yo": "0"
     }
   },
   {
@@ -1036,9 +1036,9 @@
       "type": "公立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "3",
-      "waiting_2yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1055,12 +1055,12 @@
       "type": "公立保育園",
       "capacity": "165",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "16",
-      "waiting_1yo": "0",
-      "waiting_2yo": "3",
+      "waiting_0yo": "2",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
-      "waiting_4yo": "1",
-      "waiting_5yo": "1"
+      "waiting_4yo": "0",
+      "waiting_5yo": "0"
     }
   },
   {
@@ -1074,12 +1074,12 @@
       "type": "公立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
-      "waiting_1yo": "2",
-      "waiting_2yo": "2",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "1",
       "waiting_4yo": "0",
-      "waiting_5yo": "0"
+      "waiting_5yo": "2"
     }
   },
   {
@@ -1093,12 +1093,12 @@
       "type": "公立保育園",
       "capacity": "147",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "17",
-      "waiting_1yo": "4",
-      "waiting_2yo": "1",
-      "waiting_3yo": "2",
-      "waiting_4yo": "0",
-      "waiting_5yo": "1"
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "2",
+      "waiting_3yo": "1",
+      "waiting_4yo": "1",
+      "waiting_5yo": "0"
     }
   },
   {
@@ -1112,12 +1112,12 @@
       "type": "公立保育園",
       "capacity": "162",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
+      "waiting_0yo": "2",
       "waiting_1yo": "1",
-      "waiting_2yo": "1",
-      "waiting_3yo": "3",
+      "waiting_2yo": "3",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
-      "waiting_5yo": "2"
+      "waiting_5yo": "0"
     }
   },
   {
@@ -1131,10 +1131,10 @@
       "type": "公立保育園",
       "capacity": "195",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "9",
-      "waiting_1yo": "6",
-      "waiting_2yo": "3",
-      "waiting_3yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "1",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1150,11 +1150,11 @@
       "type": "公立保育園",
       "capacity": "248",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "36",
-      "waiting_1yo": "3",
-      "waiting_2yo": "1",
-      "waiting_3yo": "1",
-      "waiting_4yo": "1",
+      "waiting_0yo": "8",
+      "waiting_1yo": "4",
+      "waiting_2yo": "2",
+      "waiting_3yo": "0",
+      "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
@@ -1169,11 +1169,11 @@
       "type": "公立保育園",
       "capacity": "152",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
+      "waiting_0yo": "0",
       "waiting_1yo": "2",
       "waiting_2yo": "1",
-      "waiting_3yo": "3",
-      "waiting_4yo": "0",
+      "waiting_3yo": "1",
+      "waiting_4yo": "1",
       "waiting_5yo": "0"
     }
   },
@@ -1188,9 +1188,9 @@
       "type": "公立保育園",
       "capacity": "200",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
+      "waiting_0yo": "0",
       "waiting_1yo": "1",
-      "waiting_2yo": "3",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1207,7 +1207,7 @@
       "type": "公立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -1226,9 +1226,9 @@
       "type": "公立保育園",
       "capacity": "187",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "18",
-      "waiting_1yo": "3",
-      "waiting_2yo": "4",
+      "waiting_0yo": "0",
+      "waiting_1yo": "4",
+      "waiting_2yo": "0",
       "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1245,12 +1245,12 @@
       "type": "公立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "16",
-      "waiting_1yo": "7",
-      "waiting_2yo": "3",
-      "waiting_3yo": "0",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
+      "waiting_3yo": "3",
       "waiting_4yo": "0",
-      "waiting_5yo": "1"
+      "waiting_5yo": "0"
     }
   },
   {
@@ -1264,7 +1264,7 @@
       "type": "公立保育園",
       "capacity": "143",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -1283,10 +1283,10 @@
       "type": "私立保育園",
       "capacity": "222",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "16",
-      "waiting_1yo": "3",
-      "waiting_2yo": "4",
-      "waiting_3yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "7",
+      "waiting_2yo": "1",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1302,10 +1302,10 @@
       "type": "私立保育園",
       "capacity": "170",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "9",
-      "waiting_1yo": "1",
-      "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1321,10 +1321,10 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "2",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1340,7 +1340,7 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -1359,9 +1359,9 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "15",
-      "waiting_1yo": "4",
-      "waiting_2yo": "0",
+      "waiting_0yo": "2",
+      "waiting_1yo": "3",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1378,8 +1378,8 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
-      "waiting_1yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1387,7 +1387,7 @@
     }
   },
   {
-    "name": "たかね台ベビーホーム",
+    "name": "たかね台ﾍﾞﾋﾞｰﾎｰﾑ",
     "lat": "35.730606",
     "lng": "140.03051",
     "details": {
@@ -1397,12 +1397,12 @@
       "type": "私立保育園",
       "capacity": "30",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "5",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -1416,9 +1416,9 @@
       "type": "私立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "2",
-      "waiting_2yo": "3",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1435,12 +1435,12 @@
       "type": "私立保育園",
       "capacity": "29",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -1454,11 +1454,11 @@
       "type": "私立保育園",
       "capacity": "300",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "19",
-      "waiting_1yo": "2",
-      "waiting_2yo": "4",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "1",
-      "waiting_4yo": "1",
+      "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
@@ -1473,10 +1473,10 @@
       "type": "私立保育園",
       "capacity": "130",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
-      "waiting_1yo": "7",
+      "waiting_0yo": "1",
+      "waiting_1yo": "2",
       "waiting_2yo": "1",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1492,8 +1492,8 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
-      "waiting_1yo": "3",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1511,11 +1511,11 @@
       "type": "私立保育園",
       "capacity": "143",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
-      "waiting_4yo": "1",
+      "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
@@ -1530,10 +1530,10 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
       "waiting_2yo": "2",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1549,10 +1549,10 @@
       "type": "私立保育園",
       "capacity": "160",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "1",
-      "waiting_2yo": "1",
-      "waiting_3yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
+      "waiting_2yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1568,10 +1568,10 @@
       "type": "私立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1587,9 +1587,9 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
-      "waiting_2yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1606,12 +1606,12 @@
       "type": "私立保育園",
       "capacity": "29",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -1625,8 +1625,8 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "0",
-      "waiting_1yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1644,12 +1644,12 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -1664,8 +1664,8 @@
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
       "waiting_0yo": "0",
-      "waiting_1yo": "1",
-      "waiting_2yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1682,9 +1682,9 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "13",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "4",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1701,10 +1701,10 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1720,10 +1720,10 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "1",
-      "waiting_2yo": "1",
-      "waiting_3yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -1739,7 +1739,7 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -1758,9 +1758,9 @@
       "type": "私立保育園",
       "capacity": "110",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
-      "waiting_1yo": "4",
-      "waiting_2yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1777,16 +1777,16 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
-      "waiting_1yo": "2",
-      "waiting_2yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "3",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "プレスクール・ベル",
+    "name": "ﾌﾟﾚｽｸｰﾙ･ﾍﾞﾙ",
     "lat": "35.709326",
     "lng": "139.974908",
     "details": {
@@ -1796,9 +1796,9 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "3歳～5歳",
-      "waiting_0yo": "",
-      "waiting_1yo": "",
-      "waiting_2yo": "",
+      "waiting_0yo": "*",
+      "waiting_1yo": "*",
+      "waiting_2yo": "*",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1815,9 +1815,9 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "15",
+      "waiting_0yo": "0",
       "waiting_1yo": "3",
-      "waiting_2yo": "4",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1834,9 +1834,9 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "12",
-      "waiting_1yo": "3",
-      "waiting_2yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "5",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1853,8 +1853,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1872,9 +1872,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1894,9 +1894,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -1910,9 +1910,9 @@
       "type": "私立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "13",
-      "waiting_1yo": "4",
-      "waiting_2yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1929,9 +1929,9 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "2",
-      "waiting_2yo": "2",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1948,9 +1948,9 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "8",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -1967,8 +1967,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -1986,9 +1986,9 @@
       "type": "私立保育園",
       "capacity": "115",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "11",
-      "waiting_1yo": "1",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2005,9 +2005,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "16",
+      "waiting_0yo": "2",
       "waiting_1yo": "1",
-      "waiting_2yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2024,9 +2024,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "0",
-      "waiting_2yo": "0",
+      "waiting_0yo": "1",
+      "waiting_1yo": "1",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2043,16 +2043,16 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "4",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
-      "waiting_4yo": "1",
-      "waiting_5yo": "0"
+      "waiting_4yo": "0",
+      "waiting_5yo": "1"
     }
   },
   {
-    "name": "ベル・ナーサリー・アスール",
+    "name": "ﾍﾞﾙ･ﾅｰｻﾘｰ･ｱｽｰﾙ",
     "lat": "35.709409",
     "lng": "139.978132",
     "details": {
@@ -2062,7 +2062,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2081,10 +2081,10 @@
       "type": "私立保育園",
       "capacity": "130",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "29",
-      "waiting_1yo": "1",
-      "waiting_2yo": "3",
-      "waiting_3yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "3",
+      "waiting_2yo": "0",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2100,16 +2100,16 @@
       "type": "私立保育園",
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "1",
-      "waiting_2yo": "3",
-      "waiting_3yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "高根台グリーンキディ保育園",
+    "name": "高根台ｸﾞﾘｰﾝｷﾃﾞｨ保育園",
     "lat": "35.732566",
     "lng": "140.03331",
     "details": {
@@ -2119,10 +2119,10 @@
       "type": "私立保育園",
       "capacity": "78",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "19",
-      "waiting_1yo": "0",
-      "waiting_2yo": "2",
-      "waiting_3yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2138,12 +2138,12 @@
       "type": "私立保育園",
       "capacity": "48",
       "acceptable_age": "0歳～2歳",
-      "waiting_0yo": "6",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -2157,9 +2157,9 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "24",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "3",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2176,9 +2176,9 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "17",
-      "waiting_1yo": "2",
-      "waiting_2yo": "2",
+      "waiting_0yo": "1",
+      "waiting_1yo": "4",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2195,8 +2195,8 @@
       "type": "私立保育園",
       "capacity": "110",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "19",
-      "waiting_1yo": "6",
+      "waiting_0yo": "0",
+      "waiting_1yo": "3",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2214,9 +2214,9 @@
       "type": "私立保育園",
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
-      "waiting_1yo": "3",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2233,12 +2233,12 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "16",
-      "waiting_1yo": "4",
-      "waiting_2yo": "2",
+      "waiting_0yo": "1",
+      "waiting_1yo": "2",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
-      "waiting_5yo": "0"
+      "waiting_5yo": "1"
     }
   },
   {
@@ -2252,12 +2252,12 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "18",
-      "waiting_1yo": "1",
-      "waiting_2yo": "3",
-      "waiting_3yo": "0",
+      "waiting_0yo": "6",
+      "waiting_1yo": "6",
+      "waiting_2yo": "2",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
-      "waiting_5yo": "0"
+      "waiting_5yo": "1"
     }
   },
   {
@@ -2271,7 +2271,7 @@
       "type": "私立保育園",
       "capacity": "160",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "15",
+      "waiting_0yo": "4",
       "waiting_1yo": "5",
       "waiting_2yo": "2",
       "waiting_3yo": "0",
@@ -2280,7 +2280,7 @@
     }
   },
   {
-    "name": "あい・あい保育園　宮本園",
+    "name": "AIAI NURSERY宮本",
     "lat": "35.690598",
     "lng": "139.994815",
     "details": {
@@ -2290,7 +2290,7 @@
       "type": "私立保育園",
       "capacity": "74",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2309,8 +2309,8 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2328,10 +2328,10 @@
       "type": "私立保育園",
       "capacity": "110",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "12",
-      "waiting_1yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "5",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2347,7 +2347,7 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2366,9 +2366,9 @@
       "type": "私立保育園",
       "capacity": "105",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2385,7 +2385,7 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2404,8 +2404,8 @@
       "type": "私立保育園",
       "capacity": "92",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2423,8 +2423,8 @@
       "type": "私立保育園",
       "capacity": "71",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "3",
+      "waiting_0yo": "2",
+      "waiting_1yo": "1",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2432,7 +2432,7 @@
     }
   },
   {
-    "name": "あい・あい保育園　北習志野園",
+    "name": "AIAI NURSERY北習志野",
     "lat": "35.721374",
     "lng": "140.041695",
     "details": {
@@ -2442,10 +2442,10 @@
       "type": "私立保育園",
       "capacity": "56",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "0",
+      "waiting_0yo": "2",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "2",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2462,8 +2462,8 @@
       "capacity": "50",
       "acceptable_age": "0歳～5歳",
       "waiting_0yo": "0",
-      "waiting_1yo": "1",
-      "waiting_2yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2480,16 +2480,16 @@
       "type": "私立保育園",
       "capacity": "65",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "0",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "あい・あい保育園　船橋法典園",
+    "name": "AIAI NURSERY船橋法典",
     "lat": "35.729957",
     "lng": "139.970874",
     "details": {
@@ -2499,16 +2499,16 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
-      "waiting_1yo": "2",
-      "waiting_2yo": "3",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "あい・あい保育園　西船橋園",
+    "name": "AIAI NURSERY西船橋",
     "lat": "35.709906",
     "lng": "139.95698",
     "details": {
@@ -2518,8 +2518,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "2",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2537,9 +2537,9 @@
       "type": "私立保育園",
       "capacity": "77",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "1",
       "waiting_1yo": "1",
-      "waiting_2yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2556,9 +2556,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
+      "waiting_0yo": "2",
       "waiting_1yo": "1",
-      "waiting_2yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2575,7 +2575,7 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2613,9 +2613,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2632,8 +2632,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "10",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "3",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2651,16 +2651,16 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
+      "waiting_0yo": "0",
       "waiting_1yo": "2",
-      "waiting_2yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "船橋どろんこ保育園分園",
+    "name": "船橋どろんこ保育園　分園",
     "lat": "35.70142",
     "lng": "139.988925",
     "details": {
@@ -2673,9 +2673,9 @@
       "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
-      "waiting_3yo": "",
-      "waiting_4yo": "",
-      "waiting_5yo": ""
+      "waiting_3yo": "*",
+      "waiting_4yo": "*",
+      "waiting_5yo": "*"
     }
   },
   {
@@ -2689,18 +2689,18 @@
       "type": "私立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "28",
-      "waiting_1yo": "4",
-      "waiting_2yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "5",
+      "waiting_2yo": "2",
       "waiting_3yo": "0",
-      "waiting_4yo": "0",
+      "waiting_4yo": "1",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "まなびの森保育園東船橋",
-    "lat": "35.698327",
-    "lng": "140.004117",
+    "name": "まなびの森保育園　東船橋",
+    "lat": "35.6981856",
+    "lng": "140.002607",
     "details": {
       "number": "143",
       "address": "千葉県船橋市東船橋1-18-12",
@@ -2708,8 +2708,8 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "24",
-      "waiting_1yo": "3",
+      "waiting_0yo": "3",
+      "waiting_1yo": "5",
       "waiting_2yo": "2",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2727,7 +2727,7 @@
       "type": "私立保育園",
       "capacity": "40",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "1",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2746,9 +2746,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
-      "waiting_2yo": "1",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2765,8 +2765,8 @@
       "type": "私立保育園",
       "capacity": "65",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2784,10 +2784,10 @@
       "type": "私立保育園",
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "1",
-      "waiting_2yo": "1",
-      "waiting_3yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2803,10 +2803,10 @@
       "type": "私立保育園",
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "4",
-      "waiting_2yo": "1",
-      "waiting_3yo": "1",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
+      "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
@@ -2822,8 +2822,8 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "1",
+      "waiting_0yo": "0",
+      "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2841,8 +2841,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "5",
-      "waiting_1yo": "0",
+      "waiting_0yo": "2",
+      "waiting_1yo": "3",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2860,16 +2860,16 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "1歳～5歳",
-      "waiting_0yo": "",
-      "waiting_1yo": "0",
-      "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_0yo": "*",
+      "waiting_1yo": "3",
+      "waiting_2yo": "1",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
   },
   {
-    "name": "Milky Way International Nursery School 新船橋校",
+    "name": "Milky　Way　International　Nursery　School　新船橋校",
     "lat": "35.713935",
     "lng": "139.986597",
     "details": {
@@ -2879,8 +2879,8 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
-      "waiting_1yo": "4",
+      "waiting_0yo": "3",
+      "waiting_1yo": "1",
       "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2917,8 +2917,8 @@
       "type": "私立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "7",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "2",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2926,7 +2926,7 @@
     }
   },
   {
-    "name": "まなびの森保育園船橋競馬場駅前",
+    "name": "まなびの森保育園　船橋競馬場駅前",
     "lat": "35.689601",
     "lng": "139.997138",
     "details": {
@@ -2936,9 +2936,9 @@
       "type": "私立保育園",
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "8",
-      "waiting_1yo": "2",
-      "waiting_2yo": "1",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
+      "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -2955,7 +2955,7 @@
       "type": "私立保育園",
       "capacity": "50",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -2974,8 +2974,8 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
-      "waiting_1yo": "0",
+      "waiting_0yo": "0",
+      "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
@@ -2984,8 +2984,8 @@
   },
   {
     "name": "ミアヘルサ保育園ひびき新船橋北",
-    "lat": "35.715246",
-    "lng": "139.980369",
+    "lat": "35.713191",
+    "lng": "139.980005",
     "details": {
       "number": "158",
       "address": "千葉県船橋市山手1-1-11",
@@ -2993,7 +2993,7 @@
       "type": "私立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -3012,9 +3012,9 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "12",
-      "waiting_1yo": "5",
-      "waiting_2yo": "2",
+      "waiting_0yo": "2",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -3031,7 +3031,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
+      "waiting_0yo": "0",
       "waiting_1yo": "1",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -3040,7 +3040,7 @@
     }
   },
   {
-    "name": "京進のほいくえん　ＨＯＰＰＡ前原西",
+    "name": "京進のほいくえんＨＯＰＰＡ前原西",
     "lat": "35.698527",
     "lng": "140.015559",
     "details": {
@@ -3050,7 +3050,7 @@
       "type": "私立保育園",
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "2",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -3069,7 +3069,7 @@
       "type": "私立保育園",
       "capacity": "40",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "3",
+      "waiting_0yo": "0",
       "waiting_1yo": "0",
       "waiting_2yo": "0",
       "waiting_3yo": "0",
@@ -3097,7 +3097,7 @@
     }
   },
   {
-    "name": "ベル・ナーサリー　塚田",
+    "name": "ベル・ナーサリー塚田",
     "lat": "35.719061",
     "lng": "139.978201",
     "details": {
@@ -3107,9 +3107,9 @@
       "type": "私立保育園",
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "4",
-      "waiting_1yo": "3",
-      "waiting_2yo": "0",
+      "waiting_0yo": "1",
+      "waiting_1yo": "0",
+      "waiting_2yo": "1",
       "waiting_3yo": "0",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
@@ -3126,10 +3126,10 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "waiting_0yo": "6",
+      "waiting_0yo": "1",
       "waiting_1yo": "1",
       "waiting_2yo": "0",
-      "waiting_3yo": "0",
+      "waiting_3yo": "1",
       "waiting_4yo": "0",
       "waiting_5yo": "0"
     }
