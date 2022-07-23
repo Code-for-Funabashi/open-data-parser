@@ -16,6 +16,8 @@ from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import skip_rows
 from open_data_parser.transformer import rename_key
+from open_data_parser.transformer import concat_str
+from open_data_parser.transformer import query_coordinate_from_address
 from open_data_parser.writer import write_json
 from open_data_parser.formatter import format_to_point
 from open_data_parser.formatter import format_to_polygon
@@ -113,6 +115,34 @@ TARGETS = [
         ),
         writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
     ),
+    # 公民館
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/kosodate-map/kouminkan.csv",
+            schema=[
+                "id",
+                "area",
+                "name",
+                "name_hurigana",
+                "phone_number",
+                "FAX_number",
+                "zip_code",
+                "address",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(concat_str, key="name", value="公民館", from_left=False),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="kouminkan.json"
+        ),
+    ),
+    # 小学校区
     Target(
         reader=partial(
             fetch_shapefile,
