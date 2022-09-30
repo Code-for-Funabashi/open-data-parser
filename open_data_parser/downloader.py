@@ -32,7 +32,7 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     return csv.DictReader(open(path, "r"), schema)
 
 
-def read_json(path: str) -> Iterator[Dict]:
+def read_json(path: str) -> Dict:
     """
     localに配置させたjson fileからデータを読み込みスキーマのデータを返却する
     """
@@ -96,6 +96,6 @@ def read_excel(
     localに配置させたExcelファイルからデータを読み込み、定義されたスキーマのデータを返却する
     """
     book = pd.ExcelFile(path)
-    sheet = book.parse(sheet_name, skiprows=skiprows, usecols=usecols, names=schema)
+    sheet = book.parse(sheet_name, skiprows=skiprows, usecols=usecols, names=schema, dtype="object").fillna(0)
     for _, row in sheet.iterrows():
         yield row.to_dict()

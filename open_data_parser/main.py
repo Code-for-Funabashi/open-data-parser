@@ -9,9 +9,13 @@ from typing import Callable
 from typing import TypedDict
 
 from open_data_parser.downloader import read_csv
+from open_data_parser.downloader import read_json
+from open_data_parser.downloader import read_excel
 from open_data_parser.downloader import fetch_shapefile
 from open_data_parser.transformer import transform
+from open_data_parser.transformer import to_dict
 from open_data_parser.transformer import skip_header
+from open_data_parser.transformer import merge_with_dict
 from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import skip_rows
@@ -48,120 +52,96 @@ TARGETS = [
     # 保育園
     Target(
         reader=partial(
-            read_csv,
-            path="./input/kosodate-map/hoikuen.csv",
-            schema=[
-                "shichoson_code",
-                "number",
-                "prefecture",
-                "cities",
+            read_excel,
+            path="./input/kosodate-map/hoikuen.xlsx",
+            sheet_name="入所可能性一覧",
+            skiprows=9,
+            usecols="E,H:M",
+            schema=(
                 "name",
-                "name_kana",
-                "type",
-                "address",
-                "katagaki",
-                "lat",
-                "lng",
-                "access",
-                "parking",
-                "phone_number",
-                "naisen_phone_number",
-                "fax_number",
-                "corporate_number",
-                "corporate_name",
-                "approval_date",
-                "capacity",
-                "acceptable_age",
-                "available_day_of_week",
-                "start_time",
-                "end_time",
-                "available_date_and_time_special_notes",
-                "temporary_childcare",
-                "url",
-                "remarks",
-                "waiting_0yo",
-                "waiting_1yo",
-                "waiting_2yo",
-                "waiting_3yo",
-                "waiting_4yo",
-                "waiting_5yo",
-                "waiting_all_yo",
-                "lat_bodik",
-                "lng_bodik",
-            ],
+                "acceptable_0yo",
+                "acceptable_1yo",
+                "acceptable_2yo",
+                "acceptable_3yo",
+                "acceptable_4yo",
+                "acceptable_5yo",
+            ),
         ),
         transformers=[
-            skip_header,
-            partial(skip_rows, filter_key="lng_bodik", value=""),
-            partial(rename_key, from_="lng_bodik", to="lng"),
-            partial(rename_key, from_="lat_bodik", to="lat"),
+            # partial(concat_str, key="name", value="保育園", from_left=False),
+            partial(
+                merge_with_dict,
+                master_data=to_dict(
+                    read_json("./input/masterdata/hoikuen.json"), "name"
+                ),
+                key="name",
+            ),
         ],
         formatter=partial(
             format_to_point,
             details_schema=[
-                "number",
                 "address",
                 "phone_number",
                 "type",
                 "capacity",
                 "acceptable_age",
-                "waiting_0yo",
-                "waiting_1yo",
-                "waiting_2yo",
-                "waiting_3yo",
-                "waiting_4yo",
-                "waiting_5yo",
+                "acceptable_0yo",
+                "acceptable_1yo",
+                "acceptable_2yo",
+                "acceptable_3yo",
+                "acceptable_4yo",
+                "acceptable_5yo",
             ],
         ),
         writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
     ),
-    # 公民館
-    Target(
-        reader=partial(
-            read_csv,
-            path="./input/kosodate-map/kouminkan.csv",
-            schema=[
-                "id",
-                "area",
-                "name",
-                "name_hurigana",
-                "phone_number",
-                "FAX_number",
-                "zip_code",
-                "address",
-            ],
-        ),
-        transformers=[
-            skip_header,
-            partial(concat_str, key="address", value="船橋市"),
-            partial(concat_str, key="name", value="公民館", from_left=False),
-            partial(query_coordinate_from_address, keys=["address", "name"]),
-        ],
-        formatter=format_to_point,
-        writer=partial(
-            write_json, path="data/kosodate-map/", filename="kouminkan.json"
-        ),
-    ),
-    # 小学校区
-    Target(
-        reader=partial(
-            fetch_shapefile,
-            url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
-            shp_fname="A27-10_12-g_SchoolDistrict.shp",
-            dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
-            reformed_schema={
-                "name": ["A27_006", "A27_007"],
-                "institution_type": ["A27_006"],
-                "address": ["A27_008"],
-            },
-        ),
-        transformers=[
-            partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
-            partial(reverse_latlon_order, coordinates_key="coordinates"),
-        ],
-        formatter=format_to_polygon,
-        writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
-    ),
+    # # 公民館
+    # Target(
+    #     reader=partial(
+    #         read_csv,
+    #         path="./input/kosodate-map/kouminkan.csv",
+    #         schema=[
+    #             "id",
+    #             "area",
+    #             "name",
+    #             "name_hurigana",
+    #             "phone_number",
+    #             "FAX_number",
+    #             "zip_code",
+    #             "address",
+    #         ],
+    #     ),
+    #     transformers=[
+    #         skip_header,
+    #         partial(concat_str, key="address", value="船橋市"),
+    #         partial(concat_str, key="name", value="公民館", from_left=False),
+    #         partial(query_coordinate_from_address, keys=["address", "name"]),
+    #     ],
+    #     formatter=format_to_point,
+    #     writer=partial(
+    #         write_json, path="data/kosodate-map/", filename="kouminkan.json"
+    #     ),
+    # ),
+    # # 小学校区
+    # Target(
+    #     reader=partial(
+    #         fetch_shapefile,
+    #         url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
+    #         shp_fname="A27-10_12-g_SchoolDistrict.shp",
+    #         dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
+    #         reformed_schema={
+    #             "name": ["A27_006", "A27_007"],
+    #             "institution_type": ["A27_006"],
+    #             "address": ["A27_008"],
+    #         },
+    #     ),
+    #     transformers=[
+    #         partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
+    #         partial(reverse_latlon_order, coordinates_key="coordinates"),
+    #     ],
+    #     formatter=format_to_polygon,
+    #     writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
+    # ),
 ]
 
 
@@ -178,9 +158,9 @@ def main():
 
         target["writer"](data=list(formatted))
 
-
     # create metadata
     create_json_from_yaml("input/meta.yml", "data", "meta.json")
+
 
 if __name__ == "__main__":
     main()
