@@ -95,53 +95,53 @@ TARGETS = [
         ),
         writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
     ),
-    # # 公民館
-    # Target(
-    #     reader=partial(
-    #         read_csv,
-    #         path="./input/kosodate-map/kouminkan.csv",
-    #         schema=[
-    #             "id",
-    #             "area",
-    #             "name",
-    #             "name_hurigana",
-    #             "phone_number",
-    #             "FAX_number",
-    #             "zip_code",
-    #             "address",
-    #         ],
-    #     ),
-    #     transformers=[
-    #         skip_header,
-    #         partial(concat_str, key="address", value="船橋市"),
-    #         partial(concat_str, key="name", value="公民館", from_left=False),
-    #         partial(query_coordinate_from_address, keys=["address", "name"]),
-    #     ],
-    #     formatter=format_to_point,
-    #     writer=partial(
-    #         write_json, path="data/kosodate-map/", filename="kouminkan.json"
-    #     ),
-    # ),
-    # # 小学校区
-    # Target(
-    #     reader=partial(
-    #         fetch_shapefile,
-    #         url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
-    #         shp_fname="A27-10_12-g_SchoolDistrict.shp",
-    #         dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
-    #         reformed_schema={
-    #             "name": ["A27_006", "A27_007"],
-    #             "institution_type": ["A27_006"],
-    #             "address": ["A27_008"],
-    #         },
-    #     ),
-    #     transformers=[
-    #         partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
-    #         partial(reverse_latlon_order, coordinates_key="coordinates"),
-    #     ],
-    #     formatter=format_to_polygon,
-    #     writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
-    # ),
+    # 公民館
+    Target(
+        reader=partial(
+            read_csv,
+            path="./input/kosodate-map/kouminkan.csv",
+            schema=[
+                "id",
+                "area",
+                "name",
+                "name_hurigana",
+                "phone_number",
+                "FAX_number",
+                "zip_code",
+                "address",
+            ],
+        ),
+        transformers=[
+            skip_header,
+            partial(concat_str, key="address", value="船橋市"),
+            partial(concat_str, key="name", value="公民館", from_left=False),
+            partial(query_coordinate_from_address, keys=["address", "name"]),
+        ],
+        formatter=format_to_point,
+        writer=partial(
+            write_json, path="data/kosodate-map/", filename="kouminkan.json"
+        ),
+    ),
+    # 小学校区
+    Target(
+        reader=partial(
+            fetch_shapefile,
+            url="https://nlftp.mlit.go.jp/ksj/gml/data/A27/A27-10/A27-10_12_GML.zip",
+            shp_fname="A27-10_12-g_SchoolDistrict.shp",
+            dbf_fname="A27-10_12-g_SchoolDistrict.dbf",
+            reformed_schema={
+                "name": ["A27_006", "A27_007"],
+                "institution_type": ["A27_006"],
+                "address": ["A27_008"],
+            },
+        ),
+        transformers=[
+            partial(filter_rows, filter_key="institution_type", filter_value="船橋市立"),
+            partial(reverse_latlon_order, coordinates_key="coordinates"),
+        ],
+        formatter=format_to_polygon,
+        writer=partial(write_json, path="data/kosodate-map/", filename="gakku.json"),
+    ),
 ]
 
 
