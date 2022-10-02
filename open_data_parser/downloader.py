@@ -8,7 +8,7 @@ import io
 from typing import Dict
 from typing import List
 from typing import Iterator
-from typing import Callable
+from typing import Optional
 import shapefile
 from shapely.geometry import shape
 from shapely.geometry import mapping
@@ -90,12 +90,24 @@ def fetch_shapefile(
 
 
 def read_excel(
-    path: str, sheet_name: str, skiprows: int, usecols: str, schema: list[str]
+    path: str,
+    sheet_name: str,
+    schema: list[str],
+    skiprows: int = 0,
+    skipfooter: int = 0,
+    usecols: Optional[str] = None,
 ) -> Iterator[Dict]:
     """
     localに配置させたExcelファイルからデータを読み込み、定義されたスキーマのデータを返却する
     """
     book = pd.ExcelFile(path)
-    sheet = book.parse(sheet_name, skiprows=skiprows, usecols=usecols, names=schema, dtype="object").fillna(0)
+    sheet = book.parse(
+        sheet_name,
+        skiprows=skiprows,
+        skipfooter=skipfooter,
+        usecols=usecols,
+        names=schema,
+        dtype="object",
+    ).fillna(0)
     for _, row in sheet.iterrows():
         yield row.to_dict()

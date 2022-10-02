@@ -55,8 +55,6 @@ TARGETS = [
             read_excel,
             path="./input/kosodate-map/hoikuen.xlsx",
             sheet_name="入所可能性一覧",
-            skiprows=9,
-            usecols="E,H:M",
             schema=(
                 "name",
                 "acceptable_0yo",
@@ -66,6 +64,9 @@ TARGETS = [
                 "acceptable_4yo",
                 "acceptable_5yo",
             ),
+            skiprows=9,
+            skipfooter=4, # 位置情報が公開されていないため、家庭的保育事業者はスキップ
+            usecols="E,H:M",
         ),
         transformers=[
             # partial(concat_str, key="name", value="保育園", from_left=False),
