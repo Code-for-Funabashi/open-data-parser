@@ -2,7 +2,6 @@
 import csv
 import json
 from urllib import request
-from logging import getLogger
 import zipfile
 import io
 from typing import Dict
@@ -14,7 +13,6 @@ from shapely.geometry import shape
 from shapely.geometry import mapping
 import pandas as pd
 
-logger = getLogger()
 
 
 def fetch_csv(url: str, schema: List[str]) -> Iterator[Dict]:
