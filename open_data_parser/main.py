@@ -69,7 +69,6 @@ TARGETS = [
             usecols="E,H:M",
         ),
         transformers=[
-            # partial(concat_str, key="name", value="保育園", from_left=False),
             partial(
                 merge_with_dict,
                 master_data=to_dict(
