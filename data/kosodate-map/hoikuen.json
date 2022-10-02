@@ -918,6 +918,24 @@
     }
   },
   {
+    "name": "弥生",
+    "lat": "35.710973",
+    "lng": "139.945285",
+    "details": {
+      "address": "千葉県船橋市本中山3-4-18",
+      "phone_number": "047-332-7280",
+      "type": "私立保育園",
+      "capacity": "150",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
+    }
+  },
+  {
     "name": "みそら",
     "lat": "35.714409",
     "lng": "139.954308",
