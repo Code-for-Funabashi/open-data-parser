@@ -1872,6 +1872,24 @@
     }
   },
   {
+    "name": "東船橋ひなた",
+    "lat": "35.7123176",
+    "lng": "139.9206794",
+    "details": {
+      "address": "千葉県船橋市中野木2-31-13",
+      "phone_number": "047-409-9830",
+      "type": "私立保育園",
+      "capacity": "60",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
+    }
+  },
+  {
     "name": "キューティー",
     "lat": "35.700653",
     "lng": "140.031883",
@@ -2448,6 +2466,24 @@
     }
   },
   {
+    "name": "トットはさま",
+    "lat": "35.7123176",
+    "lng": "139.9206794",
+    "details": {
+      "address": "千葉県船橋市飯山満町3-1345-1",
+      "phone_number": "047-404-3504",
+      "type": "私立保育園",
+      "capacity": "67",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
+    }
+  },
+  {
     "name": "不二幼稚園",
     "lat": "35.709871",
     "lng": "140.021396",
@@ -2463,6 +2499,24 @@
       "acceptable_3yo": 1,
       "acceptable_4yo": 1,
       "acceptable_5yo": 1
+    }
+  },
+  {
+    "name": "栄光幼稚園",
+    "lat": "35.7123176",
+    "lng": "139.9206794",
+    "details": {
+      "address": "千葉県船橋市藤原7-3-1　東信馬込沢ビル5F",
+      "phone_number": "047-468-8833",
+      "type": "私立保育園",
+      "capacity": "67",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
     }
   },
   {

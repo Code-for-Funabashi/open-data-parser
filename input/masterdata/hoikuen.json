@@ -1813,5 +1813,38 @@
     "type": "私立保育園",
     "capacity": "60",
     "acceptable_age": "0歳～5歳"
+  },
+  {
+    "name": "東船橋ひなた",
+    "lat": "35.7123176",
+    "lng": "139.9206794",
+    "number": "60",
+    "address": "千葉県船橋市中野木2-31-13",
+    "phone_number": "047-409-9830",
+    "type": "私立保育園",
+    "capacity": "60",
+    "acceptable_age": "0歳～5歳"
+  },
+  {
+    "name": "トットはさま",
+    "lat": "35.7160881",
+    "lng": "140.0241429",
+    "number": "67",
+    "address": "千葉県船橋市飯山満町3-1345-1",
+    "phone_number": "047-404-3504",
+    "type": "私立保育園",
+    "capacity": "67",
+    "acceptable_age": "0歳～5歳"
+  },
+  {
+    "name": "栄光幼稚園",
+    "lat": "35.7163862",
+    "lng": "140.0188995",
+    "number": "135",
+    "address": "千葉県船橋市芝山3-10-9",
+    "phone_number": "047-464-8084",
+    "type": "認定こども園",
+    "capacity": "67",
+    "acceptable_age": "3歳～5歳"
   }
 ]
