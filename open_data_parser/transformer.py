@@ -124,7 +124,7 @@ def to_dict(data: Iterator[dict], key: str) -> dict[str, Any]:
 
 def merge_with_dict(data: list[dict], master_data: dict, key: str) -> Iterator[dict]:
     """
-    定義されたスキーマのデータを返却する
+    与えられたkeyを元に、master_dataとdataをmergeする。
     """
 
     for row in data:
