@@ -9,9 +9,13 @@ from typing import Callable
 from typing import TypedDict
 
 from open_data_parser.downloader import read_csv
+from open_data_parser.downloader import read_json
+from open_data_parser.downloader import read_excel
 from open_data_parser.downloader import fetch_shapefile
 from open_data_parser.transformer import transform
+from open_data_parser.transformer import to_dict
 from open_data_parser.transformer import skip_header
+from open_data_parser.transformer import merge_with_dict
 from open_data_parser.transformer import reverse_latlon_order
 from open_data_parser.transformer import filter_rows
 from open_data_parser.transformer import skip_rows
@@ -48,69 +52,45 @@ TARGETS = [
     # 保育園
     Target(
         reader=partial(
-            read_csv,
-            path="./input/kosodate-map/hoikuen.csv",
-            schema=[
-                "shichoson_code",
-                "number",
-                "prefecture",
-                "cities",
+            read_excel,
+            path="./input/kosodate-map/hoikuen.xlsx",
+            sheet_name="入所可能性一覧",
+            schema=(
                 "name",
-                "name_kana",
-                "type",
-                "address",
-                "katagaki",
-                "lat",
-                "lng",
-                "access",
-                "parking",
-                "phone_number",
-                "naisen_phone_number",
-                "fax_number",
-                "corporate_number",
-                "corporate_name",
-                "approval_date",
-                "capacity",
-                "acceptable_age",
-                "available_day_of_week",
-                "start_time",
-                "end_time",
-                "available_date_and_time_special_notes",
-                "temporary_childcare",
-                "url",
-                "remarks",
-                "waiting_0yo",
-                "waiting_1yo",
-                "waiting_2yo",
-                "waiting_3yo",
-                "waiting_4yo",
-                "waiting_5yo",
-                "waiting_all_yo",
-                "lat_bodik",
-                "lng_bodik",
-            ],
+                "acceptable_0yo",
+                "acceptable_1yo",
+                "acceptable_2yo",
+                "acceptable_3yo",
+                "acceptable_4yo",
+                "acceptable_5yo",
+            ),
+            skiprows=9,
+            skipfooter=4, # 位置情報が公開されていないため、家庭的保育事業者はスキップ
+            usecols="E,H:M",
         ),
         transformers=[
-            skip_header,
-            partial(skip_rows, filter_key="lng_bodik", value=""),
-            partial(rename_key, from_="lng_bodik", to="lng"),
-            partial(rename_key, from_="lat_bodik", to="lat"),
+            partial(
+                merge_with_dict,
+                master_data=to_dict(
+                    read_json("./input/masterdata/hoikuen.json"), "name"
+                ),
+                key="name",
+            ),
         ],
         formatter=partial(
             format_to_point,
             details_schema=[
-                "number",
                 "address",
                 "phone_number",
                 "type",
                 "capacity",
                 "acceptable_age",
-                "waiting_0yo",
-                "waiting_1yo",
-                "waiting_2yo",
-                "waiting_3yo",
-                "waiting_4yo",
-                "waiting_5yo",
+                "acceptable_0yo",
+                "acceptable_1yo",
+                "acceptable_2yo",
+                "acceptable_3yo",
+                "acceptable_4yo",
+                "acceptable_5yo",
             ],
         ),
         writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
@@ -178,9 +158,9 @@ def main():
 
         target["writer"](data=list(formatted))
 
-
     # create metadata
     create_json_from_yaml("input/meta.yml", "data", "meta.json")
+
 
 if __name__ == "__main__":
     main()

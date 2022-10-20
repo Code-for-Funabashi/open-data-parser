@@ -1,14 +1,18 @@
 """Download Data"""
 import csv
-import shapefile
+import json
 from urllib import request
 import zipfile
 import io
 from typing import Dict
 from typing import List
 from typing import Iterator
+from typing import Optional
+import shapefile
 from shapely.geometry import shape
 from shapely.geometry import mapping
+import pandas as pd
+
 
 
 def fetch_csv(url: str, schema: List[str]) -> Iterator[Dict]:
@@ -24,6 +28,13 @@ def read_csv(path: str, schema: List[str]) -> Iterator[Dict]:
     localに配置させたcsv fileからデータを読み込み、定義されたスキーマのデータを返却する
     """
     return csv.DictReader(open(path, "r"), schema)
+
+
+def read_json(path: str) -> Dict:
+    """
+    localに配置させたjson fileからデータを読み込みスキーマのデータを返却する
+    """
+    return json.load(open(path, "r"))
 
 
 def unzip_shapefile(url: str, shp_fname: str, dbf_fname: str) -> shapefile.ShapeRecords:
@@ -74,3 +85,27 @@ def fetch_shapefile(
         record = feature.record.as_dict()
         output.update(combine_keys(record, reformed_schema))
         yield output
+
+
+def read_excel(
+    path: str,
+    sheet_name: str,
+    schema: list[str],
+    skiprows: int = 0,
+    skipfooter: int = 0,
+    usecols: Optional[str] = None,
+) -> Iterator[Dict]:
+    """
+    localに配置させたExcelファイルからデータを読み込み、定義されたスキーマのデータを返却する
+    """
+    book = pd.ExcelFile(path)
+    sheet = book.parse(
+        sheet_name,
+        skiprows=skiprows,
+        skipfooter=skipfooter,
+        usecols=usecols,
+        names=schema,
+        dtype="object",
+    ).fillna(0)
+    for _, row in sheet.iterrows():
+        yield row.to_dict()

@@ -109,3 +109,27 @@ def rename_key(data: Iterator[Dict], from_: str, to: str) -> Iterator[Dict]:
         del record[from_]
 
         yield record
+
+def to_dict(data: Iterator[dict], key: str) -> dict[str, Any]:
+    """
+    Iterator[dict] を、keyのdictに変換する
+    """
+
+    res = {}
+
+    for row in data:
+        res[row[key]]= row
+
+    return res
+
+def merge_with_dict(data: list[dict], master_data: dict, key: str) -> Iterator[dict]:
+    """
+    与えられたkeyを元に、master_dataとdataをmergeする。
+    """
+
+    for row in data:
+        if row[key] not in master_data:
+            logger.warning("%s がマスターデータに存在しません。マスターデータの情報が最新か確認してください", row[key])
+            continue
+        row.update(master_data[row[key]])
+        yield row

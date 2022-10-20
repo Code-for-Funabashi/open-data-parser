@@ -124,7 +124,6 @@ class TestReverseLatLonOrder(unittest.TestCase):
 
 
 class TestSkipRows(unittest.TestCase):
-
     def test_skip_rows(self):
         data = [
             {"key1": "hoge", "key2": "funa"},
@@ -138,8 +137,8 @@ class TestSkipRows(unittest.TestCase):
 
         self.assertEqual(list(actual), expected)
 
-class TestRenameKey(unittest.TestCase):
 
+class TestRenameKey(unittest.TestCase):
     def test_rename_key(self):
         data = [
             {"key1": "hoge", "key2": "funa"},
@@ -151,5 +150,81 @@ class TestRenameKey(unittest.TestCase):
         ]
 
         actual = target.rename_key(data, "key2", "renamed_key")
+
+        self.assertEqual(list(actual), expected)
+
+
+class TestToDict(unittest.TestCase):
+    def test_to_dict(self):
+        data = [
+            {
+                "name": "田喜野井旭こども園",
+                "lat": 35.703267,
+                "lng": 140.042440,
+            },
+            {
+                "name": "うみのほいくえん",
+                "lat": 35.695792,
+                "lng": 139.983968,
+            },
+        ]
+        expected = {
+            "田喜野井旭こども園": {
+                "name": "田喜野井旭こども園",
+                "lat": 35.703267,
+                "lng": 140.042440,
+            },
+            "うみのほいくえん": {
+                "name": "うみのほいくえん",
+                "lat": 35.695792,
+                "lng": 139.983968,
+            },
+        }
+
+        actual = target.to_dict(data, "name")
+
+        self.assertEqual(actual, expected)
+
+
+class TestMergeWithDict(unittest.TestCase):
+    def test_merge_with_dict(self):
+        data = [
+            {
+                "name": "田喜野井旭こども園",
+                "key1": "hoge",
+            },
+            {
+                "name": "うみのほいくえん",
+                "key1": "fuga",
+            },
+        ]
+        master_data = {
+            "田喜野井旭こども園": {
+                "name": "田喜野井旭こども園",
+                "lat": 35.703267,
+                "lng": 140.042440,
+            },
+            "うみのほいくえん": {
+                "name": "うみのほいくえん",
+                "lat": 35.695792,
+                "lng": 139.983968,
+            },
+        }
+        expected = [
+            {
+                "name": "田喜野井旭こども園",
+                "key1": "hoge",
+                "lat": 35.703267,
+                "lng": 140.042440,
+            },
+            {
+                "name": "うみのほいくえん",
+                "key1": "fuga",
+                "lat": 35.695792,
+                "lng": 139.983968,
+            },
+        ]
+
+        actual = target.merge_with_dict(data, master_data, "name")
 
         self.assertEqual(list(actual), expected)

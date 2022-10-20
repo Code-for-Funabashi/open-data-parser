@@ -7,8 +7,8 @@ poetry install
 ```
 
 ## Requirement
-- Python 3.8 or later
-- poetry 1.0 or later
+- Python 3.10 or later
+- poetry 1.2 or later
 
 [geocoding]: https://developers.google.com/maps/documentation/geocoding/overview
 
@@ -29,5 +29,11 @@ poetry run python -m unittest discover tests/open_data_parser/
 ```
 
 ## Data
+
+### Input
+入力するデータを `input/` 配下に格納する。  
+
+
+### Output
 open_data_parserで加工したデータは `/data` 配下に出力される。  
 これは [kosodate-map](https://github.com/Code-for-Funabashi/kosodate-map) で利用するため、githubの管理対象としている。
