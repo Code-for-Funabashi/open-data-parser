@@ -2986,5 +2986,23 @@
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
+  },
+  {
+    "name": "小室",
+    "lat": "35.788141",
+    "lng": "140.076097",
+    "details": {
+      "address": "千葉県船橋市小室町3305",
+      "phone_number": "047-457-1717",
+      "type": "公立保育園",
+      "capacity": "120",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 3,
+      "acceptable_5yo": 0
+    }
   }
 ]
