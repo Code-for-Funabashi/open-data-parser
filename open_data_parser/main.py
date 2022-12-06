@@ -66,7 +66,7 @@ TARGETS = [
             ),
             skiprows=9,
             skipfooter=3, # 位置情報が公開されていないため、家庭的保育事業者はスキップ
-            usecols="F,I:N",
+            usecols="E,H:M",
         ),
         transformers=[
             partial(
