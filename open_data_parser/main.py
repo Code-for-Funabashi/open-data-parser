@@ -64,7 +64,7 @@ TARGETS = [
                 "acceptable_4yo",
                 "acceptable_5yo",
             ),
-            skiprows=9,
+            skiprows=5,
             skipfooter=3, # 位置情報が公開されていないため、家庭的保育事業者はスキップ
             usecols="E,H:M",
         ),
