@@ -12,9 +12,9 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 7,
+      "acceptable_3yo": 9,
       "acceptable_4yo": 14,
-      "acceptable_5yo": 7
+      "acceptable_5yo": 10
     }
   },
   {
@@ -29,9 +29,9 @@
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 1,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 2,
-      "acceptable_4yo": 2,
+      "acceptable_4yo": 4,
       "acceptable_5yo": 3
     }
   },
@@ -49,7 +49,7 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 6,
-      "acceptable_4yo": 2,
+      "acceptable_4yo": 3,
       "acceptable_5yo": 10
     }
   },
@@ -66,7 +66,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 3,
+      "acceptable_3yo": 4,
       "acceptable_4yo": 13,
       "acceptable_5yo": 0
     }
@@ -81,10 +81,10 @@
       "type": "公立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 2,
+      "acceptable_3yo": 3,
       "acceptable_4yo": 4,
       "acceptable_5yo": 2
     }
@@ -119,7 +119,7 @@
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 5,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -136,7 +136,7 @@
       "capacity": "40",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 1,
+      "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 4,
@@ -173,8 +173,8 @@
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_2yo": 1,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 1
     }
@@ -190,8 +190,8 @@
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 1,
-      "acceptable_2yo": 1,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -207,9 +207,9 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 2,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 2,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -225,9 +225,9 @@
       "type": "小規模保育所",
       "capacity": "12",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 1,
-      "acceptable_1yo": 1,
-      "acceptable_2yo": 1,
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -243,7 +243,7 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -263,7 +263,7 @@
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 2,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 2,
+      "acceptable_2yo": 3,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -282,8 +282,8 @@
       "acceptable_0yo": 1,
       "acceptable_1yo": 2,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 9,
-      "acceptable_4yo": 9,
+      "acceptable_3yo": 8,
+      "acceptable_4yo": 12,
       "acceptable_5yo": 0
     }
   },
@@ -298,7 +298,7 @@
       "capacity": "143",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 3,
-      "acceptable_1yo": 3,
+      "acceptable_1yo": 2,
       "acceptable_2yo": 0,
       "acceptable_3yo": 7,
       "acceptable_4yo": 10,
@@ -316,10 +316,10 @@
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 4,
-      "acceptable_1yo": 0,
+      "acceptable_1yo": 4,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
-      "acceptable_4yo": 0,
+      "acceptable_3yo": 2,
+      "acceptable_4yo": 1,
       "acceptable_5yo": 5
     }
   },
@@ -369,12 +369,12 @@
       "type": "私立保育園",
       "capacity": "140",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
-      "acceptable_4yo": 0,
-      "acceptable_5yo": 0
+      "acceptable_2yo": 2,
+      "acceptable_3yo": 4,
+      "acceptable_4yo": 1,
+      "acceptable_5yo": 2
     }
   },
   {
@@ -387,7 +387,7 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 2,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -407,10 +407,10 @@
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 6,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 5,
-      "acceptable_3yo": 0,
-      "acceptable_4yo": 1,
-      "acceptable_5yo": 1
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 2,
+      "acceptable_4yo": 2,
+      "acceptable_5yo": 3
     }
   },
   {
@@ -426,9 +426,9 @@
       "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 5
+      "acceptable_5yo": 6
     }
   },
   {
@@ -459,7 +459,7 @@
       "type": "私立保育園",
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -477,7 +477,7 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 5,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -496,8 +496,8 @@
       "capacity": "15",
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 2,
-      "acceptable_2yo": 6,
+      "acceptable_1yo": 3,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -514,10 +514,10 @@
       "capacity": "126",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 2,
-      "acceptable_1yo": 2,
-      "acceptable_2yo": 1,
-      "acceptable_3yo": 3,
-      "acceptable_4yo": 5,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 4,
+      "acceptable_4yo": 7,
       "acceptable_5yo": 6
     }
   },
@@ -536,7 +536,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 2
+      "acceptable_5yo": 3
     }
   },
   {
@@ -567,7 +567,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -588,7 +588,7 @@
       "acceptable_0yo": 6,
       "acceptable_1yo": 0,
       "acceptable_2yo": 1,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 2,
       "acceptable_4yo": 1,
       "acceptable_5yo": 4
     }
@@ -604,7 +604,7 @@
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 3,
+      "acceptable_1yo": 1,
       "acceptable_2yo": 1,
       "acceptable_3yo": 1,
       "acceptable_4yo": 13,
@@ -624,9 +624,9 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
-      "acceptable_4yo": 3,
-      "acceptable_5yo": 3
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
     }
   },
   {
@@ -642,7 +642,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -657,8 +657,8 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 5,
-      "acceptable_1yo": 0,
+      "acceptable_0yo": 6,
+      "acceptable_1yo": 1,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 1,
@@ -695,14 +695,14 @@
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 1,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
   {
-    "name": "（仮称）まなびの森 りんごのき　（旧：りんごのき）",
+    "name": "まなびの森 りんごのき",
     "lat": "35.69834",
     "lng": "140.004138",
     "details": {
@@ -749,7 +749,7 @@
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -767,7 +767,7 @@
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -822,8 +822,8 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 6,
-      "acceptable_4yo": 2,
+      "acceptable_3yo": 9,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 7
     }
   },
@@ -878,7 +878,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 1,
-      "acceptable_5yo": 0
+      "acceptable_5yo": 1
     }
   },
   {
@@ -909,12 +909,12 @@
       "type": "公立保育園",
       "capacity": "155",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
-      "acceptable_1yo": 2,
+      "acceptable_0yo": 1,
+      "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
-      "acceptable_4yo": 3,
-      "acceptable_5yo": 6
+      "acceptable_3yo": 2,
+      "acceptable_4yo": 2,
+      "acceptable_5yo": 7
     }
   },
   {
@@ -927,7 +927,7 @@
       "type": "私立保育園",
       "capacity": "170",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -966,8 +966,8 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
-      "acceptable_4yo": 3,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
@@ -981,12 +981,12 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 2,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 0
     }
   },
   {
@@ -999,11 +999,11 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 5,
+      "acceptable_0yo": 6,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 8,
-      "acceptable_4yo": 1,
+      "acceptable_4yo": 2,
       "acceptable_5yo": 1
     }
   },
@@ -1020,9 +1020,9 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 2,
-      "acceptable_4yo": 4,
-      "acceptable_5yo": 1
+      "acceptable_3yo": 9,
+      "acceptable_4yo": 3,
+      "acceptable_5yo": 7
     }
   },
   {
@@ -1056,7 +1056,7 @@
       "acceptable_0yo": 5,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 2,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -1071,7 +1071,7 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1094,7 +1094,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 2,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 2
     }
   },
   {
@@ -1128,7 +1128,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -1147,7 +1147,7 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 1,
-      "acceptable_4yo": 0,
+      "acceptable_4yo": 1,
       "acceptable_5yo": 0
     }
   },
@@ -1161,11 +1161,11 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 1,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
@@ -1182,9 +1182,9 @@
       "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
-      "acceptable_4yo": 1,
-      "acceptable_5yo": 5
+      "acceptable_3yo": 1,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 4
     }
   },
   {
@@ -1198,11 +1198,11 @@
       "capacity": "75",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 3,
-      "acceptable_1yo": 1,
+      "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
-      "acceptable_4yo": 3,
-      "acceptable_5yo": 0
+      "acceptable_3yo": 1,
+      "acceptable_4yo": 4,
+      "acceptable_5yo": 2
     }
   },
   {
@@ -1215,9 +1215,9 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 2,
-      "acceptable_1yo": 2,
-      "acceptable_2yo": 1,
+      "acceptable_0yo": 3,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -1254,8 +1254,8 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 9,
-      "acceptable_4yo": 2,
+      "acceptable_3yo": 7,
+      "acceptable_4yo": 4,
       "acceptable_5yo": 0
     }
   },
@@ -1305,11 +1305,11 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 2,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
@@ -1323,7 +1323,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 5,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1341,12 +1341,12 @@
       "type": "私立保育園",
       "capacity": "100",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
-      "acceptable_1yo": 0,
+      "acceptable_0yo": 1,
+      "acceptable_1yo": 2,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 0,
-      "acceptable_5yo": 0
+      "acceptable_4yo": 1,
+      "acceptable_5yo": 1
     }
   },
   {
@@ -1400,7 +1400,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 0
+      "acceptable_5yo": 1
     }
   },
   {
@@ -1413,7 +1413,7 @@
       "type": "私立保育園",
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 7,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1451,7 +1451,7 @@
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 1,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -1485,7 +1485,7 @@
       "type": "私立保育園",
       "capacity": "130",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 3,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1503,7 +1503,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1521,10 +1521,10 @@
       "type": "私立保育園",
       "capacity": "80",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -1539,12 +1539,12 @@
       "type": "私立保育園",
       "capacity": "50",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 2,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 0
     }
   },
   {
@@ -1557,7 +1557,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 5,
+      "acceptable_0yo": 4,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1575,7 +1575,7 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1611,12 +1611,12 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 2,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 3
     }
   },
   {
@@ -1629,10 +1629,10 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
-      "acceptable_1yo": 0,
+      "acceptable_0yo": 2,
+      "acceptable_1yo": 1,
       "acceptable_2yo": 1,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -1647,7 +1647,7 @@
       "type": "私立保育園",
       "capacity": "65",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 2,
+      "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1683,7 +1683,7 @@
       "type": "私立保育園",
       "capacity": "60",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 6,
+      "acceptable_0yo": 5,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1705,8 +1705,8 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 1,
-      "acceptable_5yo": 3
+      "acceptable_4yo": 2,
+      "acceptable_5yo": 4
     }
   },
   {
@@ -1719,11 +1719,11 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 2,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 1,
-      "acceptable_3yo": 1,
-      "acceptable_4yo": 1,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
@@ -1741,8 +1741,8 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 2,
-      "acceptable_5yo": 4
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
     }
   },
   {
@@ -1814,7 +1814,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 0
     }
   },
   {
@@ -1849,7 +1849,7 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
-      "acceptable_4yo": 1,
+      "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
   },
@@ -1866,7 +1866,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 1
     }
@@ -1917,9 +1917,9 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
-      "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_0yo": 2,
+      "acceptable_1yo": 1,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -1935,7 +1935,7 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -1953,9 +1953,9 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 1,
-      "acceptable_1yo": 2,
-      "acceptable_2yo": 1,
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -1972,9 +1972,9 @@
       "capacity": "162",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 0,
+      "acceptable_1yo": 3,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -1990,7 +1990,7 @@
       "capacity": "143",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 4,
-      "acceptable_1yo": 2,
+      "acceptable_1yo": 4,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
@@ -2066,7 +2066,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 0
     }
   },
   {
@@ -2115,7 +2115,7 @@
       "type": "小規模保育所",
       "capacity": "18",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 3,
+      "acceptable_0yo": 4,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2154,7 +2154,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 1
     }
@@ -2172,7 +2172,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 2,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -2187,12 +2187,12 @@
       "type": "私立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
-      "acceptable_4yo": 1,
-      "acceptable_5yo": 1
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
     }
   },
   {
@@ -2205,7 +2205,7 @@
       "type": "私立保育園",
       "capacity": "70",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 6,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2224,7 +2224,7 @@
       "capacity": "29",
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 2,
-      "acceptable_1yo": 1,
+      "acceptable_1yo": 2,
       "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
@@ -2241,7 +2241,7 @@
       "type": "私立保育園",
       "capacity": "48",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 1,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2296,7 +2296,7 @@
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 7,
+      "acceptable_1yo": 3,
       "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
@@ -2313,7 +2313,7 @@
       "type": "小規模保育所",
       "capacity": "18",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2331,7 +2331,7 @@
       "type": "小規模保育所",
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 0,
       "acceptable_2yo": 1,
       "acceptable_3yo": 0,
@@ -2351,7 +2351,7 @@
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2368,8 +2368,8 @@
       "capacity": "19",
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 2,
-      "acceptable_1yo": 7,
-      "acceptable_2yo": 6,
+      "acceptable_1yo": 3,
+      "acceptable_2yo": 4,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2390,7 +2390,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 7
+      "acceptable_5yo": 8
     }
   },
   {
@@ -2403,9 +2403,9 @@
       "type": "私立保育園",
       "capacity": "29",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 1,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2422,9 +2422,9 @@
       "capacity": "115",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 1,
-      "acceptable_2yo": 2,
-      "acceptable_3yo": 1,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 1
     }
@@ -2511,12 +2511,12 @@
       "type": "認定こども園（保育所型）",
       "capacity": "318",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 3,
+      "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 1,
-      "acceptable_3yo": 4,
-      "acceptable_4yo": 4,
-      "acceptable_5yo": 2
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 1,
+      "acceptable_4yo": 1,
+      "acceptable_5yo": 1
     }
   },
   {
@@ -2534,7 +2534,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 3,
-      "acceptable_5yo": 8
+      "acceptable_5yo": 3
     }
   },
   {
@@ -2552,7 +2552,7 @@
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 4
+      "acceptable_5yo": 2
     }
   },
   {
@@ -2565,10 +2565,10 @@
       "type": "私立保育園",
       "capacity": "90",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -2584,7 +2584,7 @@
       "capacity": "60",
       "acceptable_age": "1歳～5歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 4,
+      "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
@@ -2604,7 +2604,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 3,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -2621,7 +2621,7 @@
       "acceptable_age": "0歳～2歳",
       "acceptable_0yo": 1,
       "acceptable_1yo": 2,
-      "acceptable_2yo": 1,
+      "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2638,8 +2638,8 @@
       "capacity": "18",
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_1yo": 3,
+      "acceptable_2yo": 5,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2658,7 +2658,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 0,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -2677,8 +2677,8 @@
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 10,
-      "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_4yo": 2,
+      "acceptable_5yo": 2
     }
   },
   {
@@ -2727,7 +2727,7 @@
       "type": "私立保育園",
       "capacity": "30",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 3,
+      "acceptable_0yo": 2,
       "acceptable_1yo": 1,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2747,7 +2747,7 @@
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
-      "acceptable_2yo": 0,
+      "acceptable_2yo": 2,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
@@ -2763,12 +2763,12 @@
       "type": "私立保育園",
       "capacity": "78",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 0
+      "acceptable_5yo": 1
     }
   },
   {
@@ -2817,10 +2817,10 @@
       "type": "公立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
-      "acceptable_1yo": 1,
+      "acceptable_0yo": 1,
+      "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 3,
+      "acceptable_3yo": 0,
       "acceptable_4yo": 1,
       "acceptable_5yo": 0
     }
@@ -2854,7 +2854,7 @@
       "capacity": "19",
       "acceptable_age": "1歳～2歳",
       "acceptable_0yo": 0,
-      "acceptable_1yo": 4,
+      "acceptable_1yo": 1,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
@@ -2910,7 +2910,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 1,
+      "acceptable_3yo": 2,
       "acceptable_4yo": 0,
       "acceptable_5yo": 0
     }
@@ -2928,9 +2928,9 @@
       "acceptable_0yo": 3,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 2,
+      "acceptable_3yo": 1,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 3
+      "acceptable_5yo": 2
     }
   },
   {
@@ -2961,7 +2961,7 @@
       "type": "私立保育園",
       "capacity": "15",
       "acceptable_age": "0歳～2歳",
-      "acceptable_0yo": 0,
+      "acceptable_0yo": 1,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
@@ -2982,7 +2982,7 @@
       "acceptable_0yo": 0,
       "acceptable_1yo": 0,
       "acceptable_2yo": 0,
-      "acceptable_3yo": 10,
+      "acceptable_3yo": 11,
       "acceptable_4yo": 6,
       "acceptable_5yo": 0
     }
@@ -3034,11 +3034,11 @@
       "capacity": "150",
       "acceptable_age": "0歳～5歳",
       "acceptable_0yo": 5,
-      "acceptable_1yo": 1,
-      "acceptable_2yo": 5,
-      "acceptable_3yo": 5,
-      "acceptable_4yo": 5,
-      "acceptable_5yo": 1
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 2,
+      "acceptable_3yo": 1,
+      "acceptable_4yo": 0,
+      "acceptable_5yo": 0
     }
   },
   {
@@ -3051,12 +3051,12 @@
       "type": "公立保育園",
       "capacity": "120",
       "acceptable_age": "0歳～5歳",
-      "acceptable_0yo": 0,
-      "acceptable_1yo": 0,
+      "acceptable_0yo": 1,
+      "acceptable_1yo": 3,
       "acceptable_2yo": 0,
       "acceptable_3yo": 0,
       "acceptable_4yo": 0,
-      "acceptable_5yo": 1
+      "acceptable_5yo": 0
     }
   }
 ]
