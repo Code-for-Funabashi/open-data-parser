@@ -1,4 +1,5 @@
 """main"""
+import argparse
 import shutil
 from functools import partial
 from typing import Iterator
@@ -8,6 +9,7 @@ from typing import Callable
 
 from typing import TypedDict
 
+from open_data_parser.logger import logger
 from open_data_parser.downloader import read_csv
 from open_data_parser.downloader import read_json
 from open_data_parser.downloader import read_excel
@@ -28,9 +30,6 @@ from open_data_parser.formatter import format_to_polygon
 from open_data_parser.writer import create_json_from_yaml
 
 
-OUTPUT_BASE_PATH = "./data"
-
-
 class Target(TypedDict):
     """パーサーのターゲット。
        データの読み込み、加工、整形、出力を行う関数を登録する。
@@ -47,6 +46,33 @@ class Target(TypedDict):
     formatter: Callable[..., Iterator[Dict[str, str]]]
     writer: Callable
 
+    # 公民館
+
+
+KOMINKAN = Target(
+    reader=partial(
+        read_csv,
+        path="./input/kosodate-map/kouminkan.csv",
+        schema=[
+            "id",
+            "area",
+            "name",
+            "name_hurigana",
+            "phone_number",
+            "FAX_number",
+            "zip_code",
+            "address",
+        ],
+    ),
+    transformers=[
+        skip_header,
+        partial(concat_str, key="address", value="船橋市"),
+        partial(concat_str, key="name", value="公民館", from_left=False),
+        partial(query_coordinate_from_address, keys=["address", "name"]),
+    ],
+    formatter=format_to_point,
+    writer=partial(write_json, path="data/kosodate-map/", filename="kouminkan.json"),
+)
 
 TARGETS = [
     # 保育園
@@ -65,7 +91,7 @@ TARGETS = [
                 "acceptable_5yo",
             ),
             skiprows=9,
-            skipfooter=3, # 位置情報が公開されていないため、家庭的保育事業者はスキップ
+            skipfooter=3,  # 位置情報が公開されていないため、家庭的保育事業者はスキップ
             usecols="E,H:M",
         ),
         transformers=[
@@ -95,33 +121,6 @@ TARGETS = [
         ),
         writer=partial(write_json, path="data/kosodate-map/", filename="hoikuen.json"),
     ),
-    # 公民館
-    Target(
-        reader=partial(
-            read_csv,
-            path="./input/kosodate-map/kouminkan.csv",
-            schema=[
-                "id",
-                "area",
-                "name",
-                "name_hurigana",
-                "phone_number",
-                "FAX_number",
-                "zip_code",
-                "address",
-            ],
-        ),
-        transformers=[
-            skip_header,
-            partial(concat_str, key="address", value="船橋市"),
-            partial(concat_str, key="name", value="公民館", from_left=False),
-            partial(query_coordinate_from_address, keys=["address", "name"]),
-        ],
-        formatter=format_to_point,
-        writer=partial(
-            write_json, path="data/kosodate-map/", filename="kouminkan.json"
-        ),
-    ),
     # 小学校区
     Target(
         reader=partial(
@@ -145,10 +144,25 @@ TARGETS = [
 ]
 
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--update_kominkan", action="store_true", help="公民館情報を更新する")
+
+    return parser.parse_args()
+
+
 def main():
     """main"""
-    shutil.rmtree(OUTPUT_BASE_PATH)
-    for target in TARGETS:
+
+    args = parse_args()
+    targets = TARGETS
+
+    if args.update_kominkan:
+        logger.info("公民館情報を更新する")
+        targets.append(KOMINKAN)
+
+    for target in targets:
 
         raw_data = target["reader"]()
 
