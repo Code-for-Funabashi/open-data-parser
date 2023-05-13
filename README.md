@@ -21,6 +21,8 @@ poetry install
 3. 以下のコマンドを実行する
 ```bash
 poetry run python open_data_parser/main.py
+# 公民館情報を更新する場合
+poetry run python open_data_parser/main.py --update_kominkan
 ```
 
 ## Testing
