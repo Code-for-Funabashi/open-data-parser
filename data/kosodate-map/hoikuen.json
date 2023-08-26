@@ -1,5 +1,23 @@
 [
   {
+    "name": "湊町",
+    "lat": "35.692838",
+    "lng": "139.985127",
+    "details": {
+      "address": "千葉県船橋市湊町1-16-23",
+      "phone_number": "047-431-4961",
+      "type": "公立保育園",
+      "capacity": "277",
+      "acceptable_age": "0歳～5歳",
+      "acceptable_0yo": 0,
+      "acceptable_1yo": 0,
+      "acceptable_2yo": 0,
+      "acceptable_3yo": 0,
+      "acceptable_4yo": 10,
+      "acceptable_5yo": 2
+    }
+  },
+  {
     "name": "千鳥",
     "lat": "35.698057",
     "lng": "139.976935",
