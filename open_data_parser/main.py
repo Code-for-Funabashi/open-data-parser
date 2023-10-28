@@ -80,7 +80,7 @@ TARGETS = [
         reader=partial(
             read_excel,
             path="./input/kosodate-map/hoikuen.xlsx",
-            sheet_name="入所可能性一覧",
+            sheet_name="受け入れ可能性",
             schema=(
                 "name",
                 "acceptable_0yo",
